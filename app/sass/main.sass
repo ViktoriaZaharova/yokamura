@@ -1,0 +1,785 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0
+  box-sizing: border-box
+  font-family: $default-font
+
+  &:hover, &:focus
+    outline: none
+
+
+.container
+  max-width: 1600px
+  width: 100%
+  padding: 0 50px
+  margin: 0 auto
+  position: relative
+  display: flex
+  flex-wrap: wrap
+
+.color-red
+  color: $accent
+
+.align-center
+  align-items: center
+
+.justify-between
+  justify-content: space-between
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+  transition: .3s ease
+
+.btn, button
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+    radius: 0
+  padding: 0
+  font-family: $default-font
+  cursor: pointer
+  transition: .3s ease
+  text-align: center
+  height: 75px
+  font-size: 26px
+  font-weight: 800
+  width: 100%
+
+.btn-accent
+  background: $accent
+  color: #fff
+
+  &:hover
+    background: $hover
+    color: #fff
+
+.btn-shadow
+  box-shadow: 0 0 5px rgba(#000, .75)
+
+//slider
+.slick-slide
+  outline: none
+
+.slick-arrow
+  width: 15px
+  height: 25px
+  opacity: 1
+  z-index: 1
+  outline: none
+  transition: .3s ease
+
+  svg
+    width: 100%
+    height: 100%
+    fill: $text
+    transition: .3s ease
+
+  &:before
+    display: none
+
+  &:hover, &:focus
+    svg
+      fill: $accent
+
+.slick-next
+  right: 0
+
+.slick-prev
+  left: 0
+
+.slick-dots
+  width: 100%
+  display: flex
+  align-items: center
+
+  li
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    background: #fff
+    margin: 0 26px 0 0
+    cursor: pointer
+    outline: none
+    transition: .3s ease
+
+    &:last-child
+      margin: 0
+
+    button
+      display: none
+
+  .slick-active
+    width: 11px
+    height: 11px
+    background: $accent
+
+.slick-dotted.slick-slider
+  margin-bottom: 0
+
+.w-100
+  width: 100%
+
+h2
+  font-size: 52px
+  width: 100%
+  text-align: center
+
+.title-line
+  text-align: center
+  width: 100%
+
+  p
+    font-size: 52px
+    text-align: center
+    width: 100%
+
+//header
+header
+  padding: 34px 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+
+
+.logo
+  max-width: 232px
+  width: 100%
+  @include display-center-center
+
+.menu
+  font-size: 18px
+  font-weight: 800
+  @include display-center
+
+  li
+    margin: 0 65px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: $text
+
+      &:hover, &:focus
+        color: $accent
+
+.list-message
+  @include display-center
+
+  li
+    margin: 0 33px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      width: 37px
+      height: 31px
+      @include display-center-center
+
+      .svg-icon
+        fill: $text
+
+      &:hover, &:focus
+        .svg-icon
+          fill: $accent
+
+.header-box
+  @include display-center
+
+  a
+    .svg-icon
+      fill: $text
+
+    &:hover, &:focus
+      .svg-icon
+        fill: $accent
+
+  .active
+    .svg-icon
+      fill: $accent
+
+
+.btn-basket
+  position: relative
+  width: 47px
+  height: 42px
+  margin: 0 56px 0 0
+
+.links-cabinet
+  width: 37px
+  height: 44px
+
+.btn-basket__val
+  width: 29px
+  height: 29px
+  position: absolute
+  border-radius: 50%
+  background: #000
+  color: #fff
+  font-size: 19px
+  font-weight: 800
+  top: -5px
+  right: -8px
+  @include display-center-center
+
+//main home
+.main-home
+  background: url("../img/bg-slider1.png") no-repeat left top
+    size: contain
+  padding: 80px 0 0
+  position: relative
+  margin: 0 0 13px
+
+  .container
+    position: relative
+
+  .counter-slide
+    position: absolute
+    right: 60px
+    bottom: 30px
+
+.home-slider__box
+  @include display-center
+
+.home-slider__box-img
+  width: 750px
+  position: relative
+  @include display-center-center
+
+
+.home-slider__box-content
+  width: calc(100% - 750px)
+
+  .box-text
+    color: $text
+    margin: 0 0 68px
+    font-weight: 900
+    max-width: 575px
+    width: 100%
+    line-height: 21px
+
+  .btn
+    max-width: 239px
+
+
+.home-slider
+  .slick-dots
+    left: 0
+    bottom: 50px
+    z-index: 1
+
+.home-slider__box-name
+  font-size: 49px
+  margin: 0 0 35px
+  font-weight: 800
+
+  h3
+    font-size: 52px
+
+.list-characteristics
+  margin: 0 auto 80px
+  display: flex
+  align-items: flex-start
+  justify-content: space-around
+  flex-wrap: wrap
+  font-weight: 800
+
+  p
+    margin: 0 0 5px
+    font-size: 36px
+    font-weight: 900
+    color: $accent
+
+.counter-slide
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  flex-wrap: wrap
+  width: 100%
+  font-size: 21px
+  font-weight: 900
+
+.counter-slide__cp
+  font-size: 38px
+  color: $accent
+  margin: 0 3px 0 0
+
+//about
+.about
+  margin: 57px 0 66px
+  background: url("../img/about-bg.png") no-repeat top right
+    size: cover
+  color: #ffffff
+  padding: 40px 0
+
+  .box-text
+    margin: 50px 0
+    max-width: 1040px
+    width: 100%
+    font-weight: 800
+    font-size: 19px
+    line-height: 26px
+    text-shadow: 16px 8px 4px rgba(#fff, .1)
+
+    h3
+      margin: 30px auto
+      font-size: 23px
+
+//.gallery
+.gallery
+  margin: 0 0 40px
+
+.gallery-slider
+  margin: 140px 0
+
+  .slick-center
+    .gallery-slider__box
+      opacity: 1
+      width: 730px
+      height: 447px
+      box-shadow: 0 0 20px $accent
+
+      img
+        height: 100%
+        object-fit: cover
+
+    .gallery-slider__box-name
+      display: block
+
+.gallery-wrapper
+  position: relative
+
+.gallery-slider__nav
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  max-width: 940px
+
+  svg
+    fill: $accent
+
+.gallery-slider__box
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 584px
+  height: 447px
+  opacity: .39
+  margin: 20px 30px
+
+  img
+    width: 100%
+    max-height: 100%
+
+.gallery-slider__box-name
+  position: absolute
+  z-index: 1
+  font-size: 29px
+  font-weight: 800
+  text-shadow: 16px 8px 4px rgba($accent, .1)
+  bottom: 0
+  left: 0
+  padding: 10px
+  box-sizing: border-box
+  color: #fff
+  transition: .3s ease
+  display: none
+
+//footer
+footer
+  background: #000
+  color: #fff
+  padding: 110px 0 80px
+
+  .logo
+    max-width: 310px
+
+  .container
+    align-items: flex-start
+    justify-content: space-between
+
+.footer-top
+  margin: 0 0 120px
+
+.copyright
+  width: 100%
+  @include display-center
+  font-size: 22px
+  font-weight: 800
+
+  .svg-icon
+    width: 31px
+    height: 31px
+    fill: #fff
+    margin: 0 11px 0 0
+
+.box-social
+  font-size: 23px
+
+.list-social
+  margin: 19px 0 22px
+  @include display-stretch
+
+  li
+    margin: 0 18px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      background: $accent
+      width: 97px
+      height: 97px
+      padding: 33px 23px
+      @include display-center-center
+
+      .svg-icon
+        fill: #fff
+
+      &:hover
+        background: $hover
+
+.btn-share
+  color: #fff
+  font-size: 28px
+  font-weight: 800
+  @include display-center
+
+  .svg-icon
+    width: 22px
+    height: 24px
+    fill: #fff
+    margin: 0 8px 0 0
+
+.footer-menu
+  font-size: 21px
+  font-weight: 800
+
+  li
+    margin: 0 0 23px
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #fff
+
+      &:hover
+        color: $hover
+
+.footer-box
+  h3
+    margin: 0 0 38px
+    font-size: 30px
+    font-weight: 800
+
+.cooperation-box
+  color: $text
+
+.phone, .mail
+  @include display-center
+  color: #fff
+  font-size: 28px
+  font-weight: 900
+
+  .svg-icon
+    fill: #fff
+    width: 35px
+    height: 35px
+    margin: 0 18px 0 0
+
+.phone
+  margin: 0 0 29px
+
+.callback-box
+  margin: 110px 0 0
+
+.btn-callback
+  height: 99px
+  max-width: 444px
+  font-size: 34px
+
+.btn-service
+  margin: 18px 0 0
+  font-size: 35px
+  color: #fff
+  @include display-center
+
+  .svg-icon
+    width: 40px
+    height: 40px
+    margin: 0 23px 0 0
+    fill: #fff
+
+//popular
+.popular
+  margin: 37px 0 57px
+
+.popular-slider
+  margin: 38px auto 0
+
+  .slick-dots
+    justify-content: center
+    position: relative
+    bottom: 0
+    margin: 45px auto 0
+
+    li
+      background: #D6D6D6
+      width: 7px
+      height: 7px
+      margin: 0 30px 0 0
+
+      &:last-child
+        margin: 0
+
+    .slick-active
+      background: $accent
+      width: 9px
+      height: 9px
+
+.popular-slider-box__img
+  opacity: .8
+  height: 272px
+
+  img
+    max-height: 100%
+
+.popular-slider-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  color: $text
+  font-size: 34px
+  font-weight: 800
+  transition: .3s ease
+  cursor: pointer
+
+  &:hover
+    color: $accent
+
+    .popular-slider-box__img
+      opacity: 1
+
+.links-all
+  color: $text
+  font-size: 32px
+  @include display-center
+
+  .svg-icon
+    margin: 0 0 0 16px
+    width: 9px
+    height: 15px
+    fill: $text
+
+  &:hover
+    color: $hover
+
+    .svg-icon
+      fill: $hover
+
+//.news
+.news
+  .title-line
+    position: relative
+    margin: 0 0 12px
+
+    .links-all
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(0, -50%)
+
+.news-slider-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  font-size: 18px
+  font-weight: 800
+  height: 358px
+  opacity: .5
+  color: $text
+
+.news-slider-box__name
+  opacity: .3
+  position: relative
+  padding: 15px 0 0
+  margin: 5px auto 0
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%,0)
+    height: 10px
+    background: $text
+    width: 3px
+
+.news-slider-box__img
+  height: 160px
+  @include display-center-center
+  img
+    max-height: 100%
+
+
+
+
+.news-slider
+  max-width: 1100px
+  width: 100%
+  margin: 0 auto
+  .slick-active + .slick-active
+    .news-slider-box__img
+      height: 215px
+    .news-slider-box
+      opacity: .79
+      font-size: 22px
+    .news-slider-box__name
+      opacity: .5
+      padding: 18px 0 0
+      &:before
+        height: 12px
+  .slick-active + .slick-center
+    .news-slider-box__img
+      height: 290px
+    .news-slider-box
+      opacity: 1
+      font-size: 34px
+    .news-slider-box__name
+      opacity: 1
+      color: $accent
+      padding: 28px 0 0
+      &:before
+        background: #000
+        height: 18px
+    + .slick-slide
+        .news-slider-box
+          opacity: .79
+          font-size: 22px
+        .news-slider-box__name
+          opacity: .5
+          padding: 18px 0 0
+          &:before
+            height: 12px
+  .slick-active + .slick-slider-opacity
+    .news-slider-box
+      opacity: .5
+      font-size: 18px
+      &:before
+        height: 10px
+    .news-slider-box__img
+      height: 160px
+    .news-slider-box__name
+      opacity: .3
+
+
+
+@import "media"
+// Всегда в конце
