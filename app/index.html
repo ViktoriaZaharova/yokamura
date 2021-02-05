@@ -25,14 +25,52 @@
 
 <body>
 
+<div class="catalog-menu">
+  <div class="container">
+
+    <div class="catalog-menu-wrapper">
+      <div class="catalog-menu-box">
+        <a href="#" class="catalog-menu-box__title">Электросамокаты</a>
+        <ul class="catalog-menu__list">
+          <li><a href="#">YOKAMURA i8</a></li>
+          <li><a href="#">YOKAMURA RX1</a></li>
+          <li><a href="#">YOKAMURA RX2</a></li>
+          <li><a href="#">YOKAMURA G</a></li>
+          <li><a href="#">YOKAMURA GS</a></li>
+          <li><a href="#">YOKAMURA ULTRA</a></li>
+          <li><a href="#">YOKAMURA Raptor</a></li>
+          <li><a href="#">YOKAMURA Raptor13</a></li>
+          <li><a href="#">YOKAMURA RS</a></li>
+        </ul>
+      </div>
+      <div class="catalog-menu-box">
+        <a href="#" class="catalog-menu-box__title">Аксессуары</a>
+        <a href="#" class="catalog-menu-box__title">Запчасти</a>
+      </div>
+
+    </div>
+
+    <div class="callback-box">
+      <a href="callback.html" class="btn btn-accent btn-callback">обратная связь</a>
+
+      <a href="service.html" class="btn-service">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#settings"></use>
+        </svg>
+        <span class="text">записаться на сервис</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="container align-center justify-between">
     <a href="index.html" class="logo"><img src="img/logo2.svg" alt=""></a>
 
     <ul class="menu">
-      <li><a href="catalog.html">каталог</a></li>
+      <li><a href="#" class="links-catalog">каталог</a></li>
       <li><a href="services.html">сервис</a></li>
-      <li><a href="catalog.html">сотрудничество</a></li>
+      <li><a href="cooperation.html">сотрудничество</a></li>
     </ul>
 
     <ul class="list-message">
@@ -637,7 +675,7 @@
       </div>
 
       <div class="footer-box cooperation-box">
-        <h3>сотрудничество</h3>
+        <a href="cooperation.html" class="cooperation-links">сотрудничество</a>
       </div>
 
       <div class="footer-box">
@@ -656,9 +694,9 @@
         </a>
 
         <div class="callback-box">
-          <a href="#modal__callback" class="btn btn-accent btn-callback open_modal">обратная связь</a>
+          <a href="callback.html" class="btn btn-accent btn-callback">обратная связь</a>
 
-          <a href="#" class="btn-service">
+          <a href="service.html" class="btn-service">
             <svg class="svg-icon">
               <use xlink:href="img/sprite.svg#settings"></use>
             </svg>
@@ -721,6 +759,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

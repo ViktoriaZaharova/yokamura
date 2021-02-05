@@ -117,4 +117,8 @@
         </g>
     </symbol>
 
+    <symbol id="checkbox" viewBox="0 0 8.616 6.408">
+        <path d="M1110.882,2094.092l3.111,3.333,4.766-5.333" transform="translate(-1110.516 -2091.759)" fill="none" stroke="#ff1b0e" stroke-miterlimit="10" stroke-width="1"/>
+    </symbol>
+
 </svg>

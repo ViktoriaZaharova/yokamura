@@ -78,3 +78,72 @@ $(".news-slider").on("afterChange", function() {
     $('.news-slider .slick-slide.slick-active').eq(2).removeClass('slick-slider-opacity');
     $('.news-slider .slick-slide.slick-active').eq(3).removeClass('slick-slider-opacity');
 });
+
+// menu catalog
+$('.links-catalog').on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass('click');
+    $('header').toggleClass('active');
+    $('.catalog-menu').fadeToggle();
+});
+
+// mask phone
+$('[name="phone"]').mask('+7(999) 999-99-99');
+
+// модальные окна (несколько)
+$(function () {
+    let overlay = $('.overlay'),
+        open_modal = $('.open_modal'),
+        close = $('.modal__close, .overlay'),
+        modal = $('.modal__div');
+
+    open_modal.on('click',function (event) {
+        event.preventDefault();
+
+        modal.css('display', 'none').animate({
+            opacity: 0,
+            top: '45%'
+        }, 200);
+
+        let div = $(this).attr('href');
+        overlay.fadeIn(400,
+            function () {
+                $(div)
+                    .css('display', 'flex')
+                    .animate({
+                        opacity: 1,
+                        top: '50%'
+                    }, 200);
+            });
+    });
+
+    close.on('click', function () {
+        modal
+            .animate({
+                    opacity: 0,
+                    top: '45%'
+                }, 200,
+                function () {
+                    $(this).css('display', 'none');
+                    overlay.fadeOut(400);
+                }
+            );
+    });
+});
+//end
+// клик вне модального окна
+$(document).on('click', function (e) {
+    let div = $(".modal__body");
+    let btn = $('.open_modal');
+    if (!div.is(e.target) && !btn.is(e.target) && btn.has(e.target).length === 0 && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.modal__div').animate({
+                opacity: 0,
+                top: '45%'
+            }, 200,
+            function () {
+                $(this).css('display', 'none');
+                $('.overlay').fadeOut(400);
+            }
+        );
+    }
+});

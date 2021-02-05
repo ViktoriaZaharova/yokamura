@@ -14,28 +14,28 @@
     box-sizing: border-box
 
 *::-webkit-input-placeholder
-  color: #666
+  color: #000
   opacity: 1
 
 *:-moz-placeholder
-  color: #666
+  color: #000
   opacity: 1
 
 *::-moz-placeholder
-  color: #666
+  color: #000
   opacity: 1
 
 *:-ms-input-placeholder
-  color: #666
+  color: #000
   opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-  color: #666
+  color: #000
 
 body input:required:valid,
 body textarea:required:valid
-  color: #666
+  color: #000
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
@@ -95,13 +95,30 @@ input, textarea, select
   outline: none
   box-shadow: none
   appearance: none
-  padding: 0
   box-sizing: border-box
   font-family: $default-font
-
+  border: 2px solid #000
+  height: 60px
+  width: 100%
+  padding: 0 19px
+  font-size: 20px
+  color: #000
+  background: transparent
+  &::placeholder
+    color: #000
   &:hover, &:focus
     outline: none
 
+textarea
+  height: 190px
+  padding: 19px
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 28px
+  &:last-child
+    margin: 0
 
 .container
   max-width: 1600px
@@ -151,8 +168,30 @@ input, textarea, select
     background: $hover
     color: #fff
 
+.btn-grey
+  background: #999999
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
 .btn-shadow
   box-shadow: 0 0 5px rgba(#000, .75)
+
+h1
+  width: 100%
+  font-size: 52px
+  display: flex
+  align-items: flex-start
+  &:before
+    content: ''
+    display: inline-block
+    margin: 5px 19px 0 0
+    width: 9px
+    height: 44px
+    background: $accent
+
+
 
 //slider
 .slick-slide
@@ -238,7 +277,78 @@ header
   left: 0
   top: 0
   width: 100%
+  z-index: 3
+
+header.active, .header
+  .menu
+    li
+      a
+        color: #fff
+      .click
+        color: $accent
+  .list-message, .header-box
+    .svg-icon
+      fill: #fff
+
+
+
+.catalog-menu
+  display: none
+  position: absolute
+  left: 0
+  top: 0
+  padding: 198px 0 260px
   z-index: 2
+  background: rgba(#000, .9)
+  width: 100%
+  .container
+    align-items: flex-start
+    justify-content: space-between
+  .callback-box
+    margin: 0
+    max-width: 444px
+    width: 100%
+  .btn-service
+    font-size: 28px
+    margin: 30px 0 0
+    .svg-icon
+      width: 23px
+      height: 23px
+      margin: 0 19px 0 0
+
+.catalog-menu-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  a
+    color: #fff
+
+.catalog-menu-box
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin: 0 95px 0 0
+  &:last-child
+    margin: 0
+
+.catalog-menu-box__title
+  margin: 0 0 30px
+  border-left: 9px solid $accent
+  padding: 0 0 0 13px
+  font-size: 27px
+  font-weight: 800
+
+.catalog-menu__list
+  font-size: 20px
+  font-weight: 800
+  padding: 0 0 0 20px
+  li
+    margin: 0 0 24px
+    &:last-child
+      margin: 0
+    a
+      &:hover
+        color: $accent
 
 
 .logo
@@ -577,8 +687,10 @@ footer
     font-size: 30px
     font-weight: 800
 
-.cooperation-box
+.cooperation-links
   color: $text
+  font-size: 30px
+  font-weight: 800
 
 .phone, .mail
   @include display-center
@@ -778,6 +890,240 @@ footer
       height: 160px
     .news-slider-box__name
       opacity: .3
+
+//pages
+.page
+  padding: 140px 0 110px
+
+.cooperation
+  background: url("../img/bg-cooperation.jpg") no-repeat center
+    size: cover
+  color: #fff
+  h1
+    margin: 0 0 59px
+
+.cooperation-content
+  font-size: 17px
+  width: calc(100% - 640px)
+  padding: 0 118px 0 0
+  .box-text
+    p
+      margin: 0 0 20px
+      &:last-child
+        margin: 0
+
+.callback-item
+  width: 640px
+  background: rgba(#fff, .84)
+  padding: 35px 95px
+
+.form
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 444px
+  margin: 0 auto
+  align-items: flex-start
+  .btn
+    margin: 0 auto 17px
+    height: 99px
+    font-size: 34px
+    &:last-child
+      margin: 0 auto
+
+.form-test
+  input
+    border-color: #fff
+    color: #fff
+    &::placeholder
+      color: #fff
+  label
+    margin: 0 0 35px
+
+//modal
+.overlay
+  z-index: 100
+  position: fixed
+  background-color: #000
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+.modal__div
+  position: fixed
+  //max-width: 620px
+  width: 100%
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+
+
+.modal__wrapper
+  width: 100%
+  max-width: 620px
+  height: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+
+.modal__body
+  width: 100%
+  min-height: 240px
+  background: #fff
+  height: auto
+  overflow: auto
+  box-sizing: border-box
+  position: relative
+  padding: 90px 50px 55px
+  h2
+    font-size: 40px
+    font-weight: 800
+  .links-accent
+    text-align: center
+    margin: 0 auto 10px
+  .box-text
+    font-size: 19px
+    margin: 72px auto 37px
+    text-align: center
+    max-width: 510px
+    width: 100%
+
+.modal__close
+  position: absolute
+  width: 23px
+  height: 23px
+  border-radius: 50%
+  cursor: pointer
+  top: -11.5px
+  right: -11.5px
+  z-index: 1
+  background: $accent
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 9px
+    height: 2px
+    background: #fff
+    top: 10px
+    left: 7px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.links-accent
+  color: $accent
+
+.modal-div-message
+  .modal__body
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2
+      margin: auto
+
+//.test-drive
+.test-drive
+  background: url("../img/bg-test.jpg") no-repeat center
+    size: cover
+  color: #fff
+  padding: 0 0 65px
+  .logo
+    margin: 53px auto 43px
+  .container
+    flex-direction: column
+    align-items: center
+  h1
+    text-align: center
+    margin: 0 auto
+    padding: 0
+    justify-content: center
+    &:before
+      display: none
+
+.title-description
+  text-align: center
+  margin: 31px auto 41px
+  max-width: 376px
+  width: 100%
+  font-size: 28px
+
+.checkbox
+  display: flex
+  align-items: flex-start
+  width: 100%
+  margin: 0
+  font-size: 23px
+  color: #000
+  a
+    display: inline
+
+.checkbox-inp
+  display: none
+
+.checkbox-custom
+  width: 26px
+  height: 26px
+  margin: 0 8px 0 0
+  min-width: 26px
+  border: 2px solid #000
+  position: relative
+  cursor: pointer
+
+.checkbox-inp:checked + .checkbox-custom
+  border-color: #2FB457
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background: url("../img/checkbox.svg") no-repeat center
+      size: contain
+    left: 0
+    top: 0
+
+.form-callback
+  input
+    color: $text
+    border-color: $text
+
+    &::placeholder
+      color: $text
+  .checkbox
+    margin: 65px 0 55px
+    a
+      margin: 0
+
+//politics
+.politics
+  padding-bottom: 20px
+  h1
+    margin: 0 0 47px
+  .box-text
+    font-size: 19px
+    p
+      margin: 0 0 10px
+      &:last-child
+        margin: 0
+
+.target-politics
+  max-width: 1050px
+  width: 100%
+  margin: 40px 0 0
+  h2
+    margin: 0 0 18px
 
 
 
