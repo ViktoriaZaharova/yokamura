@@ -63,38 +63,71 @@
   </div>
 </div>
 
-<header class="header">
-  <div class="container align-center justify-between">
-    <a href="index.html" class="logo"><img src="img/logo3.svg" alt=""></a>
-  </div>
-</header>
 
 <main>
 
-  <section class="page authorization">
+  <section class="page cooperation registration">
     <div class="container">
-      <h1>Авторизация</h1>
-      <div class="authorization-content">
-       <div class="line-wrapper">
-         <p>Еще нет аккаунта? </p>
-         <a href="registration.html" class="links-accent">Зарегистрируйтесь</a>
-       </div>
 
-        <form method="post" class="form form-callback">
-          <label><input type="text" name="mail" required placeholder="Email*"></label>
-          <label>
-            <input type="text" name="password" required placeholder="Пароль*">
+      <div class="title-line">
+        <a href="index.html" class="logo"><img src="img/logo2.svg" alt=""></a>
+        <h1>Регистрация</h1>
+      </div>
+
+      <div class="callback-item">
+        <form method="post" class="form form-registration">
+          <label><input type="text" name="name" required placeholder="Имя *"></label>
+          <label><input type="text" name="first_name" required placeholder="Фамилия *"></label>
+          <div class="label-group">
+            <p>Пол *</p>
+            <ul class="list-radio">
+              <li>
+                <label class="radio">
+                  <input class="radio-inp" type="radio" name="radio">
+                  <span class="radio-custom"></span>
+                  <span class="label">Мужской</span>
+                </label>
+              </li>
+              <li>
+                <label class="radio">
+                  <input class="radio-inp" type="radio" name="radio">
+                  <span class="radio-custom"></span>
+                  <span class="label">Женский</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <label><input type="text" name="mail" required placeholder="Ваш email *"></label>
+          <label><input type="text" name="password" required placeholder="Придумайте пароль *">
+            <span class="btn-view"><svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg></span>
+          </label>
+          <label><input type="text" name="double_password" required placeholder="Повторите пароль *">
             <span class="btn-view"><svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg></span>
           </label>
 
-          <a href="password-reset.html" class="links-accent links-reset">Забыли пароль?</a>
-          <button type="submit" class="btn btn-accent">войти</button>
+          <label class="checkbox">
+            <input class="checkbox-inp" type="checkbox" name="checkbox">
+            <span class="checkbox-custom"></span>
+            <span class="label">Я согласен на обработку
+моей <a href="politics.html" class="links-accent">персональной информации</a></span>
+          </label>
+          <button type="submit" class="btn btn-accent">зарегистрироваться</button>
         </form>
       </div>
 
-      <div class="authorization-img">
-        <img src="img/img1.jpg" alt="">
+
+      <div class="registration-content">
+        <div class="registration-title"><img src="img/registration.svg" alt=""></div>
+        <div class="box-text">
+          <p>Получите доступ к руководству по эксплуатации,
+            следите за историей технического обслуживания
+            и узнавайте первым о важных событиях в мире YOKAMURA</p>
+        </div>
+        <div class="copyright">© 2021 YOKAMURA</div>
       </div>
+
+
     </div>
   </section>
 

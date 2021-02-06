@@ -274,7 +274,9 @@
 
     <div class="modal__body">
       <h2>Сообщение отправлено!</h2>
-      <a href="index.html" class="links-accent">на главную</a>
+      <div class="modal__footer">
+        <a href="index.html" class="links-accent m-a">на главную</a>
+      </div>
     </div>
   </div>
 </div>
@@ -286,7 +288,9 @@
 
     <div class="modal__body">
       <h2>Письмо отправлено!</h2>
-      <a href="authorization.html" class="links-accent">войти</a>
+      <div class="modal__footer">
+        <a href="authorization.html" class="links-accent m-a">войти</a>
+      </div>
     </div>
   </div>
 </div>
@@ -298,7 +302,48 @@
 
     <div class="modal__body">
       <h2>Спасибо за регистрацию!</h2>
-      <a href="index.html" class="links-accent">на главную</a>
+      <div class="modal__footer">
+        <a href="index.html" class="links-accent m-a">на главную</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal__div modal-div-message" id="application__modal">
+  <div class="modal__wrapper">
+
+    <div class="modal__close"></div>
+
+    <div class="modal__body">
+      <h2>Ваша заявка создана!</h2>
+      <div class="box-text">
+        <p>На вашу электронную почту придет
+          письмо для уточнения деталей</p>
+      </div>
+      <div class="modal__footer">
+        <a href="index.html" class="links-accent ml-auto">на главную</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal__div modal-div-message" id="orders__modal">
+  <div class="modal__wrapper">
+
+    <div class="modal__close"></div>
+
+    <div class="modal__body">
+      <h2>Ваш заказ оформлен!</h2>
+      <div class="box-text">
+        <p>На вашу электронную почту придет
+          письмо с номером заказа для получения</p>
+      </div>
+      <div class="modal__footer">
+        <a href="product.html" class="links-accent">продолжить покупки</a>
+        <a href="index.html" class="links-accent ml-auto">на главную</a>
+      </div>
+
     </div>
   </div>
 </div>
@@ -308,6 +353,8 @@
 <a href="#thanks__modal" class="btn btn-accent open_modal">Сообщение отправлено!</a>
 <a href="#send__modal" class="btn btn-accent open_modal">Письмо отправлено!</a>
 <a href="#registration__modal" class="btn btn-accent open_modal">Спасибо за регистрацию!</a>
+<a href="#application__modal" class="btn btn-accent open_modal">Ваша заявка создана!</a>
+<a href="#orders__modal" class="btn btn-accent open_modal">Ваш заказ оформлен!</a>
 
 
 <script src="js/jquery.min.js"></script>
