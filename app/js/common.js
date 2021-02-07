@@ -164,6 +164,11 @@ $('.up').on("click",function () {
     return false;
 });
 
+$('.radio-order').on('click', function () {
+   $('.radio-order').removeClass('check');
+   $(this).addClass('check');
+});
+
 
 // Инициализация карты
 ymaps.ready(init);
