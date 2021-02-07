@@ -133,6 +133,9 @@ label
 .color-red
   color: $accent
 
+.color-grey
+  color: $text
+
 .align-center
   align-items: center
 
@@ -1029,6 +1032,8 @@ footer
 
 .links-accent
   color: $accent
+  &:hover
+    color: $hover
 
 .modal-div-message
   .modal__body
@@ -1450,6 +1455,193 @@ footer
 
 .fancybox-slide--html
   padding: 0
+
+//callback-page
+.callback-page
+  .box-text
+    margin: 53px 0 80px
+    font-size: 18px
+
+.form-callback-page
+  label
+    width: 21.7%
+
+.align-items-start
+  align-items: flex-start
+
+//basket
+.basket
+  h1
+    width: fit-content
+    margin: 0
+  .title-line
+    margin: 0 0 15px
+    justify-content: space-between
+    display: flex
+    align-items: flex-end
+    flex-wrap: wrap
+
+.links
+  width: fit-content
+  &:hover
+    color: $hover
+
+.basket-wrapper
+  width: calc(100% - 446px)
+  padding: 0 40px 0 0
+
+.basket-card
+  border-top: 1px solid $text
+  padding: 21px 0 0
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  position: relative
+
+.basket-card__img
+  @include display-center-center
+  width: 292px
+  height: 292px
+
+.basket-card__body
+  max-width: 534px
+  width: 100%
+  position: relative
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.basket-card__body-item
+  font-size: 19px
+
+.basket-card__name
+  color: #000
+  margin: 0 0 65px
+
+.list-info
+  color: $text
+  li
+    margin: 0 0 18px
+    &:last-child
+      margin: 0
+
+.btn-delete
+  @include display-center-center
+  width: 23px
+  height: 23px
+  border-radius: 50%
+  background: $text
+  margin: 0 0 27px auto
+  position: relative
+  transition: .3s ease
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 9px
+    height: 2px
+    background: #fff
+    top: 10px
+    left: 7px
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.basket-card__body-item-last
+  text-align: right
+
+.amount
+  display: flex
+  align-items: center
+  width: 108px
+  height: 37px
+  background: rgba($text, .47)
+  font-size: 20px
+  padding: 3px
+  margin: 90px 0 0 auto
+  input
+    background: transparent
+    border: none
+    height: 100%
+    font-weight: 800
+    font-size: 20px
+    padding: 0
+    text-align: center
+  span
+    width: 32px
+    height: 100%
+    min-width: 32px
+    cursor: pointer
+    transition: .3s ease
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      color: $accent
+  .up
+    background: #fff
+
+.sum
+  display: flex
+  align-items: center
+  font-size: 28px
+  font-weight: 800
+
+.sum-currency
+  margin: 0 0 0 20px
+  width: 18px
+  height: 19px
+
+.price-val
+  margin: 13px 0 0
+  color: $text
+
+.basket-total
+  width: 446px
+  margin: 80px 0 0
+
+.basket-total__item
+  width: 100%
+  background: rgba($text, .47)
+  padding: 39px 20px 37px
+  margin: 0 0 6px
+  .btn
+    height: 63px
+    font-size: 24px
+
+.list-orders
+  width: 100%
+  font-size: 22px
+  color: rgba(#000, .8)
+  margin: 0 0 36px
+  line-height: 1
+  li
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      bottom: 4px
+      left: 0
+      border-bottom: 1px dotted rgba(#000, .8)
+      width: 100%
+      height: 1px
+    p, span
+      position: relative
+      background: #cfcfcf
+      z-index: 1
+
+.list-orders__val
+  display: flex
+  align-items: center
+  .sum-currency
+    margin: 0 0 0 9px
+    width: 13px
+    height: 14px
 
 @import "media"
 // Всегда в конце

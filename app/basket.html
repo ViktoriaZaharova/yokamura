@@ -106,79 +106,84 @@
 
 <main>
 
-  <section class="page service">
+  <section class="page service basket">
     <div class="container">
 
-      <h1>Записаться на сервис</h1>
+      <div class="title-line">
+        <h1>Корзина</h1>
+        <a href="#" class="color-grey links">продолжить покупки</a>
+      </div>
 
-      <form method="post" class="form form-service">
-        <div class="form-group">
-          <span class="input-title">Выберите тип техники</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите модель *</option>
-              <option value="Выберите модель *">Выберите модель *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
+      <div class="basket-wrapper">
+        <div class="basket-card">
+          <a href="product.html" class="basket-card__img"><img src="img/card1.jpg" alt=""></a>
+          <div class="basket-card__body">
+            <div class="w-100">
+              <a href="#" class="btn-delete"></a>
+            </div>
+
+            <div class="basket-card__body-item">
+              <a href="product.html" class="basket-card__name">Электросамокат YOKAMURA RX1</a>
+              <ul class="list-info">
+                <li>Артикул: 30652</li>
+                <li>Цвет: черный</li>
+              </ul>
+            </div>
+            <div class="basket-card__body-item basket-card__body-item-last">
+              <div class="sum">
+                <div class="sum-text">90 560</div>
+                <div class="sum-currency"><img src="img/rub.svg" alt=""></div>
+              </div>
+              <div class="price-val">1* 90 560</div>
+              <div class="amount">
+                <span class="down">-</span>
+                <input type="text" value="1" />
+                <span class="up">+</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="basket-card">
+          <a href="product.html" class="basket-card__img"><img src="img/card1.jpg" alt=""></a>
+          <div class="basket-card__body">
+            <div class="w-100">
+              <a href="#" class="btn-delete"></a>
+            </div>
+
+            <div class="basket-card__body-item">
+              <a href="product.html" class="basket-card__name">Электросамокат YOKAMURA RX1</a>
+            </div>
+            <div class="basket-card__body-item basket-card__body-item-last">
+              <div class="sum">
+                <div class="sum-text">181 120</div>
+                <div class="sum-currency"><img src="img/rub.svg" alt=""></div>
+              </div>
+              <div class="price-val">2* 90 560</div>
+              <div class="amount">
+                <span class="down">-</span>
+                <input type="text" value="1" />
+                <span class="up">+</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="basket-total">
+        <div class="basket-total__item">
+          <ul class="list-orders">
+            <li>
+              <p>В корзине 3 товара</p>
+              <span class="list-orders__val">271 680 <span class="sum-currency"><img src="img/rub.svg" alt=""></span></span>
+            </li>
+          </ul>
+
+          <a href="checkout.html" class="btn btn-accent btn-shadow">продолжить оформление</a>
         </div>
 
-        <div class="form-group">
-          <span class="input-title">Выберите город и желаемую дату</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите город *">Выберите город *</option>
-              <option value="Выберите город *">Выберите город *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-
-          <label class="label-date">
-            <input type="text" placeholder="Выберите дату *" name="date" required>
-            <span class="input-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#calendar"></use></svg></span>
-          </label>
-
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите сервис *</option>
-              <option value="Выберите модель *">Выберите сервис *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-
-          <a href="javascript:;" data-src="#maps-modal" class="btn-maps" data-fancybox="maps">
-            <span class="btn-maps-text">посмотреть на карте</span>
-            <span class="btn-maps-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-bottom"></use></svg></span>
-          </a>
-        </div>
-
-        <div class="form-group">
-          <span class="input-title">Комментарий</span>
-          <label class="label-message"><textarea name="message" placeholder="Что случилось?"></textarea></label>
-        </div>
-
-        <div class="form-group">
-          <span class="input-title">Ваши данные</span>
-          <label><input type="text" name="name" required placeholder="Имя *"></label>
-          <label><input type="text" name="phone" required placeholder="Телефон *"></label>
-          <label><input type="text" name="mail" required placeholder="Email *"></label>
-        </div>
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-shadow btn-accent">отправить заявку</button>
-
-          <label class="checkbox">
-            <input class="checkbox-inp" type="checkbox" name="checkbox">
-            <span class="checkbox-custom"></span>
-            <span class="label">Я согласен на обработку
-моей <a href="politics.html" class="links-accent">персональной информации</a></span>
-          </label>
-        </div>
-
-        <div class="necessarily">* Обязательные поля для заполнения</div>
-      </form>
-
-
+        <a href="authorization.html" class="color-grey">войти</a>
+      </div>
     </div>
   </section>
 
@@ -336,7 +341,7 @@
 <div class="overlay"></div>
 
 <div id="maps-modal" class="modal-iframe">
-<div class="map" id="map"></div>
+  <div class="map" id="map"></div>
 </div>
 
 

@@ -93,7 +93,7 @@
     <div class="header-box">
       <a href="basket.html" class="btn-basket">
         <span class="btn-basket__icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#basket"></use></svg></span>
-        <!--        <span class="btn-basket__val">1</span>-->
+                <span class="btn-basket__val">1</span>
       </a>
       <a href="registration.html" class="links-cabinet">
         <svg class="svg-icon">
@@ -106,62 +106,40 @@
 
 <main>
 
-  <section class="page service">
+  <section class="page service callback-page">
     <div class="container">
 
-      <h1>Записаться на сервис</h1>
+      <h1>Обратная связь</h1>
 
-      <form method="post" class="form form-service">
-        <div class="form-group">
-          <span class="input-title">Выберите тип техники</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите модель *</option>
-              <option value="Выберите модель *">Выберите модель *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-        </div>
+      <div class="box-text">
+        <p>Мы всегда рады ответить на интересующие Вас вопросы!</p>
+      </div>
 
-        <div class="form-group">
-          <span class="input-title">Выберите город и желаемую дату</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите город *">Выберите город *</option>
-              <option value="Выберите город *">Выберите город *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-
-          <label class="label-date">
-            <input type="text" placeholder="Выберите дату *" name="date" required>
-            <span class="input-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#calendar"></use></svg></span>
-          </label>
-
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите сервис *</option>
-              <option value="Выберите модель *">Выберите сервис *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-
-          <a href="javascript:;" data-src="#maps-modal" class="btn-maps" data-fancybox="maps">
-            <span class="btn-maps-text">посмотреть на карте</span>
-            <span class="btn-maps-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-bottom"></use></svg></span>
-          </a>
-        </div>
-
-        <div class="form-group">
-          <span class="input-title">Комментарий</span>
-          <label class="label-message"><textarea name="message" placeholder="Что случилось?"></textarea></label>
-        </div>
-
+      <form method="post" class="form form-service form-callback-page">
         <div class="form-group">
           <span class="input-title">Ваши данные</span>
           <label><input type="text" name="name" required placeholder="Имя *"></label>
           <label><input type="text" name="phone" required placeholder="Телефон *"></label>
           <label><input type="text" name="mail" required placeholder="Email *"></label>
+          <label class="label-select">
+            <select name="select" class="select" required>
+              <option value="Город *">Город *</option>
+              <option value="Город *">Город *</option>
+            </select>
+            <span class="select-icon"></span>
+          </label>
+        </div>
+
+        <div class="form-group align-items-start">
+          <span class="input-title">Ваш вопрос или комментарий</span>
+          <label class="label-select">
+            <select name="select" class="select" required>
+              <option value="Тема обращения *">Тема обращения *</option>
+              <option value="Тема обращения *">Тема обращения *</option>
+            </select>
+            <span class="select-icon"></span>
+          </label>
+          <label class="label-message"><textarea name="message" placeholder="Что случилось?"></textarea></label>
         </div>
 
         <div class="form-group">
