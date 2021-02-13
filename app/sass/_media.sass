@@ -1,55 +1,558 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width: 1300px)
+  .home-slider__box-img
+    width: 600px
+
+  .home-slider__box-content
+    width: calc(100% - 600px)
+
+  .main-home
+    padding: 100px 0 0
 
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width: 1200px)
+  .menu li
+    margin: 0 30px 0 0
 
+  .home-slider__box-name
+    font-size: 44px
+    h3
+      font-size: 50px
+
+  .container
+    padding: 0 30px
+
+  .btn-basket
+    margin: 0 38px 0 0
+
+  .home-slider__box-img
+    width: 500px
+
+  .home-slider__box-content
+    width: calc(100% - 500px)
+
+  .main-home
+    background-position: -30% top
+
+  .catalog-menu .callback-box
+    max-width: 380px
+
+  .btn-callback
+    height: 85px
+    font-size: 28px
+
+  .footer-box h3
+    font-size: 29px
+
+  .footer-menu
+    font-size: 17px
+
+  .btn-service
+    font-size: 25px
+    .svg-icon
+      width: 28px
+      height: 27px
+      margin: 0 16px 0 0
+
+  footer
+    .btn-callback
+      height: 70px
+      font-size: 23px
+
+  .list-social li a
+    width: 83px
+    height: 83px
+    padding: 24px
+
+  .btn-share
+    font-size: 24px
+
+  .box-social
+    font-size: 19px
+
+
+@media only screen and (max-width: 992px)
+  header
+    padding: 31px 0
+    .menu
+      display: none
+
+  .logo
+    max-width: 228px
+
+  .btn-burger
+    display: block
+
+  .list-characteristics
+    font-size: 14px
+    p
+      font-size: 30px
+
+  .catalog-menu
+    padding: 117px 0 40px
+    .btn-service
+      font-size: 24px
+      margin: 37px 0 0
+      .svg-icon
+        width: 20px
+        height: 20px
+        margin: 0 16px 0 0
+
+  .catalog-menu-box__title
+    font-size: 23px
+    border-left-width: 8px
+
+  .catalog-menu__list
+    font-size: 17px
+    li
+      margin: 0 0 22px
+
+  .catalog-menu-box
+    margin: 0 30px 0 0
+
+  .about
+    background-position: left top
+    h2, .title-line p
+      font-size: 44px
+    .box-text
+      margin: 26px 0 0
+
+  .about-slider
+    padding: 0 30px
+
+  .gallery-slider
+    margin: 40px 0
+
+  .gallery-slider__box
+    width: 500px
+    height: 350px
+
+  .gallery-slider .slick-center .gallery-slider__box
+    width: 600px
+    height: 350px
+
+  .gallery-slider__box-name
+    font-size: 20px
+
+  .gallery-slider__nav
+    .slick-prev
+      left: 20px
+    .slick-next
+      right: 20px
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
+@media only screen and (max-width: 950px)
+  .callback-box
+    margin: 20px 0 0
 
+  .footer-box
+    margin: 0 0 30px
+
+@media only screen and (max-width: 920px)
+  .home-slider__box
+    position: relative
+
+  .home-slider__box-content
+    width: 100%
+    padding: 0
+    color: #fff
+    position: relative
+    z-index: 1
+    .list-characteristics
+      flex-direction: column
+      align-items: flex-start
+      color: #fff
+      margin: 0 0 238px 30px
+      li
+        margin: 0 0 18px
+        &:last-child
+          margin: 0
+        p
+          color: #fff
+    .box-text
+      color: #fff
+    .btn
+      max-width: none
+      height: 77px
+      font-size: 28px
+      margin: 0 auto
+
+
+  .home-slider__box-name
+    margin: 0 0 24px
+
+  .home-slider__box-img
+    max-width: 680px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  .main-home
+    background-position: left top
+    padding: 159px 0 0
+    -webkit-background-size: cover
+    background-size: cover
+
+  .home-slider
+    .slick-prev
+      left: -15px
+    .slick-next
+      right: -15px
+    .slick-dots
+      position: relative
+      margin: 30px auto 38px
+      bottom: 0
+      justify-content: center
+
+  .main-home .counter-slide
+    display: none
+
+  .slick-dots li
+    margin: 0 23px 0 0
+
+  .slick-arrow
+    width: 12px
+    height: 21px
+
+  .catalog-menu-box
+    margin: 0 0 30px
+
+  .catalog-menu-wrapper
+    width: 100%
+    margin: 0 0 67px
+    flex-direction: column
+    align-items: flex-start
+
+  .catalog-menu
+    .callback-box
+      max-width: none
+      flex-direction: column
+      align-items: center
+      .phone
+        display: flex
+        margin: 55px auto 0
+        justify-content: center
+        font-size: 24px
+        .svg-icon
+          width: 30px
+          height: 30px
+          margin: 0 15px 0 0
+    .btn-service
+      justify-content: center
+
+  .btn-callback
+    max-width: none
+
+  .news .title-line .links-all
+    display: none
+
+  .about .box-text
+    font-size: 18px
+
+  .about
+    background: url("../img/about-bg-mobile.png") no-repeat left top
+      size: cover
+
+@media only screen and (max-width: 768px)
+  .home-slider__box-content
+    .box-text
+      display: none
+    .list-characteristics
+      margin: 0 0 238px 30px
+
+  .main-home
+    margin: 0 0 28px
+
+  h2
+    font-size: 44px
+
+  .news-slider-box
+    min-height: 467px
+
+  .news-slider .slick-active + .slick-center .news-slider-box__name
+    padding: 25px 0 0
+
+  .news-slider .slick-active + .slick-active .news-slider-box
+    font-size: 29px
+
+  .news-slider .slick-active + .slick-center .news-slider-box
+    font-size: 45px
+
+  .news
+    .container
+      padding: 0
+
+  .news-slider, .popular-slider
+    .slick-prev
+      left: 20px
+    .slick-next
+      right: 20px
+
+  .popular-slider-box
+    width: 290px
+    font-size: 37px
+    pointer-events: none
+
+  .popular-slider
+    .slick-center
+      .popular-slider-box
+        width: 334px
+        color: $accent
+        margin: 44px -20px 0
+        z-index: 1
+        position: relative
+      .popular-slider-box__img
+        opacity: 1
+
+  .popular
+    .container
+      padding: 0
+
+  .popular-slider-box__img
+    opacity: .6
+
+
+  .about-slider
+    margin: 44px 0 0
+    padding: 0
+    .slick-dots
+      justify-content: center
+      margin: 30px auto 0
+      position: relative
+      bottom: 0
+    .box-text
+      text-align: center
+      max-width: 440px
+      margin: 0 auto
+
+  .about
+    padding: 63px 0 34px
+    .title-line
+      p, h2
+        display: inline
+
+  .gallery-slider .slick-center .gallery-slider__box
+    width: 415px
+    height: 254px
+    position: relative
+    z-index: 1
+
+  .gallery-slider__box
+    height: 254px
+    width: 300px
+    margin: 20px 18px
+
+  .gallery-slider__box-name
+    font-size: 16px
+    padding: 5px 10px
+
+  .gallery-slider
+    margin: 20px 0
+
+  footer
+    padding: 34px 0 24px
+    .d-mobile.callback-box
+      display: flex
+      width: 100%
+      flex-direction: column
+      align-items: center
+      margin: 0 auto 41px
+      padding: 0 30px
+    .container
+      padding: 0
+    .box-social
+      order: -1
+      width: 100%
+    .logo
+      margin: 36px 0 34px
+      max-width: 221px
+
+  .footer-box
+    width: 100%
+    margin: 0
+    padding: 14px 30px
+    border-top: 1px solid rgba(#fff, .62)
+    h3
+      display: none
+      margin: 0
+    .callback-box, .phone, .mail
+      display: none
+    .dropdown-item
+      h3
+        display: block
+
+  .cooperation-links
+    display: none
+
+  .copyright
+    justify-content: center
+    margin: 19px 0 0
+
+  .links-version
+    display: block
+
+  .footer-box-tech
+    h3
+      display: block
+
+  .dropdown-item
+    display: flex
+
+  .dropdown-item.click
+    .svg-icon
+      transform: rotate(180deg)
+
+  .block-hidden
+    display: none
+    margin: 36px 0 0
+
+  .footer-top
+    margin: 0 0 40px
+
+  .footer-bottom
+    .container
+      padding: 0 30px
+
+
+  .list-social li
+    margin: 0 16px 0 0
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width: 670px)
+  .list-message
+    display: none
 
+  header
+    .logo
+      margin: 0 auto 0 0
+
+  .btn-burger
+    margin: 0 0 0 39px
+
+  .logo
+    max-width: 195px
+
+  .home-slider__box-img
+    max-width: 100%
+
+@media only screen and (max-width: 575px)
+  .copyright
+    font-size: 16px
+    .svg-icon
+      width: 20px
+      height: 20px
+
+  .links-version
+    font-size: 18px
+
+@media only screen and (max-width: 480px)
+  .btn-burger
+    margin: 0 0 0 10px
+    width: 30px
+    span
+      height: 3px
+      margin: 0 0 5px
+
+  .btn-basket
+    margin: 0 10px 0 0
+    width: 40px
+    height: 30px
+
+  .links-cabinet
+    height: 30px
+    width: 31px
+
+  .container
+    padding: 0 20px
+
+  .logo
+    max-width: 150px
+
+  .home-slider__box-name
+    font-size: 30px
+    h3
+      font-size: 40px
+
+  .home-slider__box-content
+    .list-characteristics
+      margin: 0 0 160px 10px
+
+  .list-characteristics
+    li
+      p
+        font-size: 24px
+
+  .home-slider__box-content .btn
+    font-size: 20px
+    height: 60px
+
+  .main-home
+    padding: 100px 0 0
+
+  .catalog-menu .btn-service, .catalog-menu .callback-box .phone
+    font-size: 22px
+
+  .news-slider .slick-active + .slick-center .news-slider-box
+    font-size: 30px
+
+  .news-slider .slick-active + .slick-center + .slick-slide .news-slider-box
+    font-size: 18px
+
+  .news-slider-box
+    min-height: 350px
+
+  h2
+    font-size: 30px
+
+  .popular-slider-box
+    font-size: 30px
+
+  .popular-slider .slick-center .popular-slider-box
+    width: 280px
+    margin: 40px -40px 0
+
+  .about
+    background-position: center
+    margin: 0 0 20px
+
+  .about h2, .about .title-line p
+    font-size: 34px
+
+  .list-social li a
+    padding: 18px
+    width: 60px
+    height: 60px
+
+  .copyright
+    font-size: 14px
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width: 420px)
+  .about .box-text
+    font-size: 16px
+    line-height: 1.2
 
+  .about-slider
+    margin: 30px 0 0
 
-/*==========  Mobile First  ==========*/
+  .about .title-line p, .about .title-line h2
+    font-size: 28px
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
+  .gallery-slider .slick-center .gallery-slider__box
+    width: 280px
+    height: 200px
 
+  .gallery-slider__box
+    height: 200px
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
+  .btn-service
+    font-size: 20px
 
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
+  .list-social li a
+    width: 50px
+    height: 50px
+    padding: 12px
 

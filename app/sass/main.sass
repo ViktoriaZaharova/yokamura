@@ -328,6 +328,8 @@ header.active, .header
       width: 23px
       height: 23px
       margin: 0 19px 0 0
+  .phone
+    display: none
 
 .catalog-menu-wrapper
   display: flex
@@ -635,7 +637,9 @@ footer
 
 .copyright
   width: 100%
-  @include display-center
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
   font-size: 22px
   font-weight: 800
 
@@ -744,6 +748,10 @@ footer
     height: 40px
     margin: 0 23px 0 0
     fill: #fff
+  &:hover
+    color: $accent
+    .svg-icon
+      fill: $accent
 
 //popular
 .popular
@@ -2560,6 +2568,45 @@ footer
   position: fixed
   top: 0
   right: 0
+
+.btn-burger
+  width: 46px
+  display: none
+  span
+    display: block
+    width: 100%
+    height: 4px
+    margin: 0 0 9px
+    background: $text
+    &:last-child
+      margin: 0
+
+.btn-burger.click
+  span
+    background: #fff
+
+.d-mobile
+  display: none
+
+.dropdown-item
+  width: 100%
+  display: none
+  align-items: center
+  justify-content: space-between
+  .svg-icon
+    fill: #fff
+    width: 25px
+    height: 15px
+  h3
+    margin: 0
+
+.links-version
+  width: 100%
+  text-align: right
+  font-size: 22px
+  font-weight: 800
+  display: none
+  color: #fff
 
 @import "media"
 // Всегда в конце

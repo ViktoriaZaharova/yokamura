@@ -10,7 +10,8 @@ $('.home-slider').slick({
         '</svg>\n</button>',
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
-        '</svg>\n</button>'
+        '</svg>\n</button>',
+
 });
 
 let homeSlider = $('.home-slider');
@@ -34,7 +35,8 @@ $('.gallery-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
         '</svg>\n</button>',
-    appendArrows: '.gallery-slider__nav'
+    appendArrows: '.gallery-slider__nav',
+
 });
 
 // popular section
@@ -49,7 +51,45 @@ $('.popular-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
         '</svg>\n</button>',
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                variableWidth: true,
+                centerMode: true,
+            }
+        }
+    ]
+
 });
+
+// slick active
+$(window).on('load resize', function() {
+    if ($(window).width() < 768) {
+        $('.about-slider:not(.slick-initialized)').slick({
+            dots: true,
+            nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+                '  <g transform="translate(-3789.771 -2184.9)">\n' +
+                '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+                '  </g>\n' +
+                '</svg>\n</button>',
+            prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+                '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+                '</svg>\n</button>',
+            speed: 100,
+            slidesToShow: 1,
+        });
+    } else {
+        $(".about-slider.slick-initialized").slick("unslick");
+    }
+});
+// slick active
 
 $('.news-slider').slick({
     slidesToShow: 5,
@@ -62,6 +102,20 @@ $('.news-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
         '</svg>\n</button>',
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                variableWidth: true,
+            }
+        }
+    ]
 });
 
 // product slider
@@ -153,12 +207,21 @@ $(".news-slider").on("afterChange", function() {
 });
 
 // menu catalog
-$('.links-catalog').on("click", function (e) {
+$('.links-catalog, .btn-burger').on("click", function (e) {
     e.preventDefault();
     $(this).toggleClass('click');
     $('header').toggleClass('active');
     $('.catalog-menu').fadeToggle();
 });
+
+
+// menu footer
+$('.dropdown-item').on('click', function () {
+    // $('.dropdown-item').removeClass('click');
+   $(this).toggleClass('click').siblings('.block-hidden').slideToggle();
+
+});
+
 
 // mask phone
 $('[name="phone"]').mask('+7(999) 999-99-99');
