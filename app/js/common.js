@@ -194,16 +194,16 @@ $(".product-gallery").on("afterChange", function() {
 //Добавляем всем элементам прозрачность
 $('.news-slider .slick-slide').addClass('slick-slider-opacity');
 //Убираем прозрачность у центральных элементов
-$('.news-slider .slick-slide.slick-active').eq(1).removeClass('slick-slider-opacity');
+$('.news-slider .slick-slide.slick-active').eq(0).removeClass('slick-slider-opacity');
 $('.news-slider .slick-slide.slick-active').eq(2).removeClass('slick-slider-opacity');
-$('.news-slider .slick-slide.slick-active').eq(3).removeClass('slick-slider-opacity');
+$('.news-slider .slick-slide.slick-active').eq(4).removeClass('slick-slider-opacity');
 //Вешаем обработчик на событие слайдера
 $(".news-slider").on("afterChange", function() {
     //Добавляем прозрачность всем элементам, обнуляя её у нужных
     $('.news-slider .slick-slide').addClass('slick-slider-opacity');
-    $('.news-slider .slick-slide.slick-active').eq(1).removeClass('slick-slider-opacity');
+    $('.news-slider .slick-slide.slick-active').eq(0).removeClass('slick-slider-opacity');
     $('.news-slider .slick-slide.slick-active').eq(2).removeClass('slick-slider-opacity');
-    $('.news-slider .slick-slide.slick-active').eq(3).removeClass('slick-slider-opacity');
+    $('.news-slider .slick-slide.slick-active').eq(4).removeClass('slick-slider-opacity');
 });
 
 // menu catalog
@@ -269,7 +269,7 @@ $(function () {
 //end
 // клик вне модального окна
 $(document).on('click', function (e) {
-    let div = $(".modal__body");
+    let div = $(".modal__wrapper");
     let btn = $('.open_modal');
     if (!div.is(e.target) && !btn.is(e.target) && btn.has(e.target).length === 0 && div.has(e.target).length === 0) { // и не по его дочерним элементам
         $('.modal__div').animate({

@@ -1,6 +1,25 @@
 @import "vars"
 
 
+@media only screen and (max-width: 1530px)
+  .form-group label
+    margin-right: 20px
+
+@media only screen and (max-width: 1500px)
+  .form-group .label-message
+    max-width: calc(100% - 21.7% - 40px)
+
+@media only screen and (max-width: 1400px)
+  .authorization-img
+    max-width: 600px
+
+  .authorization-content
+    width: calc(100% - 600px)
+
+  .registration-content
+    max-width: 400px
+    margin: 0 auto
+
 @media only screen and (max-width: 1300px)
   .home-slider__box-img
     width: 600px
@@ -11,6 +30,21 @@
   .main-home
     padding: 100px 0 0
 
+  .cooperation-content
+    padding: 0 30px 0 0
+
+  .callback-item
+    padding: 35px
+
+  .btn-maps
+    width: 100%
+    margin: 0 auto
+    justify-content: center
+
+
+  .btn-maps-icon
+    order: -1
+    margin: 0 15px 0 0
 
 @media only screen and (max-width: 1200px)
   .menu li
@@ -71,6 +105,17 @@
 
   .box-social
     font-size: 19px
+
+  .callback-item, .authorization-img
+    width: 500px
+
+  .cooperation-content, .authorization-content
+    width: calc(100% - 500px)
+
+  .authorization
+    padding: 110px 0 60px
+
+
 
 
 @media only screen and (max-width: 992px)
@@ -141,6 +186,123 @@
       left: 20px
     .slick-next
       right: 20px
+
+  .modal__wrapper
+    h2
+      font-size: 38px
+    .box-text
+      font-size: 21px
+      margin: 42px auto 60px
+
+  .form-callback
+    .checkbox
+      margin: 55px auto 48px
+
+  input
+    height: 51px
+    padding: 0 16px
+    font-size: 17px
+
+  .checkbox
+    font-size: 21px
+
+  .form .btn, .form button
+    height: 85px
+    font-size: 29px
+
+  .cooperation-content, .authorization-content
+    width: 100%
+    padding: 0
+    margin: 0 0 30px
+
+  .callback-item
+    margin: 0 auto
+
+  .authorization-img
+    margin: 0 auto
+
+  .authorization-content
+    align-items: center
+
+  .links-reset
+    margin: 0 0 33px
+    font-size: 21px
+
+  .line-wrapper
+    margin: 0 auto 30px
+    text-align: center
+    justify-content: center
+
+  .registration-content
+    max-width: none
+    width: 100%
+    padding: 30px 0
+    .copyright
+      margin: 50px auto 0
+    .box-text
+      margin: 42px auto 0
+      max-width: 372px
+      width: 100%
+
+  .registration-title
+    max-width: 357px
+    margin: 0 auto
+    width: 100%
+
+  .registration
+    padding: 112px 0 0
+
+  .password-reset
+    .authorization-img
+      display: none
+
+    .authorization-content
+      margin: 0
+    h1
+      font-size: 44px
+      margin: 0 auto
+    .box-text
+      font-size: 18px
+      max-width: 404px
+      margin: 43px auto
+
+  .politics
+    padding: 112px 0 150px
+    h2
+      text-align: left
+      padding: 0 0 0 30px
+      font-size: 38px
+      margin: 0 0 50px
+    h1
+      margin: 0 0 38px
+
+  .target-politics
+    margin: 49px 0 0
+
+  .form-callback-page
+    justify-content: space-between
+    label
+      width: 49%
+      margin: 0 0 20px
+    .form-group
+      justify-content: space-between
+      flex-wrap: wrap
+    .label-message
+      width: 100%
+      max-width: none
+
+  .form-service
+    .checkbox
+      margin: 0 0 50px
+      padding: 0
+      order: -1
+      width: 100%
+    .btn
+      max-width: none
+      width: 100%
+      margin: 50px 0 0
+
+    
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 950px)
@@ -255,6 +417,13 @@
   .about
     background: url("../img/about-bg-mobile.png") no-repeat left top
       size: cover
+
+
+  .form-group
+    justify-content: space-between
+    label
+      width: 49%
+      margin-right: 0
 
 @media only screen and (max-width: 768px)
   .home-slider__box-content
@@ -420,6 +589,138 @@
   .list-social li
     margin: 0 16px 0 0
 
+  .cooperation-content
+    margin: 0
+    .box-text
+      display: none
+
+  .callback-item
+    width: 100%
+
+  .page
+    background: #fff
+    h1
+      font-size: 38px
+      color: #000
+
+  h1:before
+    margin: 0 17px 0 0
+
+  h1
+    margin: 0 0 43px
+
+  .header
+    .logo
+      background: url("../img/logo3.svg") no-repeat center
+        size: contain
+      width: 195px
+      height: 40px
+      img
+        display: none
+    .header-box
+      .svg-icon
+        fill: $text
+
+  .callback-item
+    padding: 0
+    h3
+      display: block
+
+  .form
+    max-width: none
+
+  .cooperation
+    padding: 115px 0 80px
+
+  .cooperation-bg
+    min-height: 184px
+    background: url("../img/bg-cooperation.jpg") no-repeat center
+      size: cover
+    width: 100%
+
+  .registration .title-line
+    flex-direction: column
+    align-items: flex-start
+    margin: 0 0 63px
+
+  input, textarea, select
+    border: 1px solid $text
+
+  input
+    padding: 0 20px
+    height: 66px
+    font-size: 21px
+    &::placeholder
+      color: $text
+
+  .form-registration .checkbox
+    margin: 0 0 35px
+
+  .checkbox
+    color: $text
+
+  .checkbox-custom
+    border: 1px solid $text
+
+  .registration
+    padding: 112px 0 0
+    .logo
+      display: none
+    h1
+      &:before
+        order: -1
+        width: 8px
+        height: 37px
+        margin: 0 18px 0 0
+
+  .registration-content
+    position: relative
+    &:before
+      content: ''
+      width: calc(100% + 60px)
+      height: 100%
+      background: url("../img/bg-cooperation.jpg") no-repeat center
+        size: cover
+      left: -30px
+      top: 0
+      position: absolute
+    >*
+      position: relative
+      z-index: 1
+
+  .callback-item
+    padding: 0 0 8px
+
+  .label-group
+    color: $text
+    font-size: 21px
+
+  .radio
+    color: $text
+    font-size: 21px
+
+  .radio-custom
+    border: 1px solid $text
+
+  .form-callback-page label
+    width: 100%
+
+  .service h1:before
+    margin: 0 15px 0 0
+
+  .callback-page
+    padding: 110px 0 50px
+    .box-text
+      margin: 29px 0 31px
+      font-size: 20px
+
+  .necessarily
+    padding: 0
+    margin: 36px 0 0
+
+  .service
+    padding: 110px 0 5px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
   .list-message
@@ -447,6 +748,46 @@
 
   .links-version
     font-size: 18px
+
+  .test-drive
+    padding: 0 0 40px
+    .logo
+      margin: 174px auto 37px
+    h1
+      font-size: 44px
+
+  .title-description
+    margin: 26px auto 28px
+    font-size: 24px
+
+  .form-test label
+    margin: 0 0 20px
+
+  .form .btn, .form button
+    margin: 0 0 38px
+    
+  .form-test
+    .btn-grey
+      background: #000
+      &:hover, &:focus
+        background: #999999
+
+  .modal__wrapper
+    height: 100%
+    margin: 0 auto
+
+  .modal-div-message
+    .modal__wrapper
+      padding: 20px
+    h2
+      margin: auto 0
+
+  .form-group
+    label
+      width: 100%
+
+  .form-service .btn
+    margin: 33px 0 0
 
 @media only screen and (max-width: 480px)
   .btn-burger
@@ -528,6 +869,47 @@
 
   .copyright
     font-size: 14px
+
+  .modal__wrapper
+    padding: 60px 20px 40px
+
+  .form-callback .checkbox
+    margin: 30px auto
+
+  .checkbox
+    font-size: 18px
+
+  .modal__wrapper .box-text
+    font-size: 16px
+    margin: 20px auto
+
+  .modal__wrapper h2
+    font-size: 30px
+
+  .page h1
+    font-size: 30px
+
+  h2
+    &:before
+      width: 8px
+      height: 37px
+      min-width: 8px
+
+  .form .btn, .form button
+    font-size: 24px
+
+  .politics h2
+    font-size: 32px
+    margin: 0 0 30px
+    padding: 0
+
+  .form-service .btn
+    margin: 50px 0 0
+
+  .btn-basket__val
+    width: 20px
+    height: 20px
+    font-size: 12px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
