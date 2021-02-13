@@ -314,6 +314,23 @@ $('[data-fancybox]').fancybox({
     ],
 });
 
+$(function () {
+    let topPos = $('.btn-test-drive').offset().top;
+    $(window).scroll(function () {
+        let top = $(document).scrollTop(),
+            pip = $('.tab-content').offset().top,
+            height = $('.btn-test-drive').outerHeight();
+        if (top > topPos && top < pip - height) {
+            $('.btn-test-drive').addClass('fixed').removeAttr("style");
+        } else if (top > pip - height) {
+            $('.btn-test-drive').removeClass('fixed');
+        } else {
+            $('.btn-test-drive').removeClass('fixed');
+        }
+    });
+});
+
+
 // Инициализация карты
 ymaps.ready(init);
 

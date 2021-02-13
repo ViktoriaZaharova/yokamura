@@ -2974,6 +2974,11 @@ footer {
     .slick-slider-my-style .product-gallery__box img {
       opacity: .5; }
 
+.btn-test-drive.fixed {
+  position: fixed;
+  top: 0;
+  right: 0; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
