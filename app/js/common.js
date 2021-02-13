@@ -64,6 +64,79 @@ $('.news-slider').slick({
         '</svg>\n</button>',
 });
 
+// product slider
+$('.features-slider').slick({
+    slidesToShow: 1,
+    fade: true,
+    dots: true,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+});
+
+$('.characteristics-product__slider').slick({
+    slidesToShow: 1,
+    fade: true,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+});
+
+$('.video-slider').slick({
+    slidesToShow: 3,
+    centerMode: true,
+    dots: true,
+    variableWidth: true,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+});
+
+$('.product-gallery').slick({
+    slidesToShow: 5,
+    centerMode: true,
+    dots: true,
+    variableWidth: true,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+});
+
+//Добавляем всем элементам классы
+$('.product-gallery .slick-slide').addClass('slick-slider-my-style');
+//Убираем прозрачность у центральных элементов
+$('.product-gallery .slick-slide.slick-active').eq(1).removeClass('slick-slider-my-style');
+$('.product-gallery .slick-slide.slick-active').eq(2).removeClass('slick-slider-my-style');
+$('.product-gallery .slick-slide.slick-active').eq(3).removeClass('slick-slider-my-style');
+//Вешаем обработчик на событие слайдера
+$(".product-gallery").on("afterChange", function() {
+    //Добавляем прозрачность всем элементам, обнуляя её у нужных
+    $('.product-gallery .slick-slide').addClass('slick-slider-my-style');
+    $('.product-gallery .slick-slide.slick-active').eq(1).removeClass('slick-slider-my-style');
+    $('.product-gallery .slick-slide.slick-active').eq(2).removeClass('slick-slider-my-style');
+    $('.product-gallery .slick-slide.slick-active').eq(3).removeClass('slick-slider-my-style');
+});
+
 //Добавляем всем элементам прозрачность
 $('.news-slider .slick-slide').addClass('slick-slider-opacity');
 //Убираем прозрачность у центральных элементов
@@ -148,6 +221,7 @@ $(document).on('click', function (e) {
     }
 });
 
+
 // amount
 $('.down').on("click", function () {
     let $input = $(this).parent().find('input');
@@ -169,6 +243,76 @@ $('.radio-order').on('click', function () {
    $(this).addClass('check');
 });
 
+$(".tab-header__item").on("click", function () {
+    let id = $(this).attr('data-tab'),
+        content = $('.js-tab-content[data-tab="'+ id +'"]');
+
+    $('.tab-header__item.active').removeClass('active'); // 1
+    $(this).addClass('active'); // 2
+
+    $('.tab-content__item.active').removeClass('active'); // 3
+    content.addClass('active'); // 4
+
+    $(".features-slider").slick('setPosition');
+    $(".characteristics-product__slider").slick('setPosition');
+});
+
+$(".characteristics-tab__item").on("click", function () {
+    let id = $(this).attr('data-tab'),
+        content = $('.js-tab-content[data-tab="'+ id +'"]');
+
+    $('.characteristics-tab__item.active').removeClass('active'); // 1
+    $(this).addClass('active'); // 2
+
+    $('.characteristics-tab-content__item.active').removeClass('active'); // 3
+    content.addClass('active'); // 4
+});
+
+$(".views-tab__item").on("click", function () {
+    let id = $(this).attr('data-tab'),
+        content = $('.js-tab-content[data-tab="'+ id +'"]');
+
+    $('.views-tab__item.active').removeClass('active'); // 1
+    $(this).addClass('active'); // 2
+
+    $('.views-tab-content__item.active').removeClass('active'); // 3
+    content.addClass('active'); // 4
+
+    $(".views-tab-content__item.active .video-slider").slick('setPosition');
+    $(".views-tab-content__item.active .product-gallery").slick('setPosition');
+});
+
+$(document).ready(function(){
+
+    let $threeSixty = $('.threesixty');
+
+    $threeSixty.threeSixty({
+        dragDirection: 'horizontal',
+        useKeys: true,
+        draggable: true
+    });
+
+    $('.next').click(function(){
+        $threeSixty.nextFrame();
+    });
+
+    $('.prev').click(function(){
+        $threeSixty.prevFrame();
+    });
+
+});
+
+$('[data-fancybox]').fancybox({
+    buttons: [
+        // "zoom",
+        //"share",
+        // "slideShow",
+        //"fullScreen",
+        //"download",
+        // "thumbs",
+        "close"
+    ],
+});
 
 // Инициализация карты
 ymaps.ready(init);
