@@ -1,6 +1,10 @@
 @import "vars"
 
 
+@media only screen and (max-width: 1600px)
+  .characteristics-product__info
+    padding: 0 0 0 40px
+
 @media only screen and (max-width: 1530px)
   .form-group label
     margin-right: 20px
@@ -8,6 +12,9 @@
 @media only screen and (max-width: 1500px)
   .form-group .label-message
     max-width: calc(100% - 21.7% - 40px)
+
+  .characteristics-product-wrapper
+    padding: 0
 
 @media only screen and (max-width: 1400px)
   .authorization-img
@@ -30,6 +37,25 @@
   .basket-card
     padding: 20px 0
 
+
+@media only screen and (max-width: 1320px)
+  .characteristics-tab__item
+    font-size: 18px
+
+  .characteristics-product__box
+    max-width: 430px
+
+  .characteristics-product__info
+    width: calc(100% - 430px)
+
+  .list-characteristics__product
+    font-size: 21px
+    li
+      &:before
+        width: 32px
+        height: 32px
+        min-width: 32px
+        font-size: 21px
 
 @media only screen and (max-width: 1300px)
   .home-slider__box-img
@@ -166,6 +192,27 @@
 
   .checkout-wrapper
     max-width: 450px
+
+  .product-home__line
+    padding: 34px 0 0
+
+  .product-home .btn
+    max-width: 300px
+
+  .characteristics-tab__item
+    font-size: 16px
+
+  .characteristics-product__box
+    max-width: 380px
+
+  .characteristics-product__info
+    width: calc(100% - 380px)
+
+  .characteristics-tab__item
+    margin: 0 10px 10px 0
+    &:last-child
+      margin: 0 0 10px
+
 
 @media only screen and (max-width: 992px)
   header
@@ -385,6 +432,47 @@
   .checkout-box
     margin: 0 0 35px
 
+  .product-gallery .slick-slide
+    min-height: 283px
+
+  .product-gallery__box
+    width: 314px
+    margin: 20px -60px
+
+  .product-gallery .slick-center .product-gallery__box
+    width: 459px
+    margin: 20px -80px
+
+  .slick-slider-my-style .product-gallery__box
+    width: 280px
+    margin: 50px -20px
+
+  .views-tab__item
+    font-size: 25px
+
+  .features-slider__box
+    flex-direction: column
+    align-items: center
+
+  .features-slider__box-photo
+    order: -1
+    margin: 0 auto 68px
+
+  .list-characteristics__product
+    width: 100%
+
+  .features-content
+    padding: 60px 0
+
+  .features-slider .slick-dots
+    position: relative
+    margin: 30px 0 0
+
+  .list-characteristics__product li
+    margin: 0 0 15px
+    &:last-child
+      margin: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 950px)
   .callback-box
@@ -392,6 +480,24 @@
 
   .footer-box
     margin: 0 0 30px
+
+  .characteristics-product__info
+    width: 100%
+    padding: 0
+    margin: 60px 0 0
+
+  .characteristics-product__box
+    max-width: none
+
+  .list-info-prod
+    max-width: none
+
+  .characteristics-tab
+    justify-content: space-between
+
+  .characteristics-tab-content__item .box-text
+    max-width: none
+
 
 @media only screen and (max-width: 920px)
   .home-slider__box
@@ -505,6 +611,21 @@
     label
       width: 49%
       margin-right: 0
+
+  .product-home
+    .btn
+      max-width: none
+      margin: 22px auto 0
+
+  .product-home .list-characteristics
+    color: #fff
+
+  .product-home h1
+    font-size: 58px
+
+  .product-home
+    min-height: 970px
+    background-position: 40% top
 
 @media only screen and (max-width: 768px)
   .home-slider__box-content
@@ -828,6 +949,26 @@
   .dropdown-wrapper
     display: block
 
+  .js-tab-content
+    padding: 40px 0
+
+  .video-slider .slick-center .video-box
+    width: 418px
+    margin: 20px -40px
+
+  .video-box
+    height: 250px
+    width: 318px
+
+  .ui
+    display: none
+
+  .header-product
+    .logo
+      background: transparent
+      img
+        display: block
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
   .list-message
@@ -1123,6 +1264,85 @@
       &:last-child
         margin: 0
 
+  .product-home
+    background-position: 30% top
+    h1
+      font-size: 50px
+
+  .characteristics-product__slider-box
+    min-height: 370px
+
+  .name-model
+    font-size: 20px
+    text-align: center
+
+  .button-group
+    flex-direction: column
+    align-items: center
+    .btn
+      margin: 0 auto 34px
+      height: 77px
+      max-width: 389px
+
+  .link-file
+    margin: 0 auto
+    font-size: 28px
+
+  .tab-content__item
+    display: block
+
+  .tabs, .views-tab
+    display: none
+
+  .dropdown-wrapper-tabs
+    display: block
+
+  .views-section .box-text
+    font-size: 19px
+
+  .characteristics-tab-content__item
+    display: block
+
+  .characteristics-tab
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: -30px
+      top: 0
+      width: calc(100% + 60px)
+      background: rgba($text, .2)
+      height: 77px
+    .slick-center
+      &:before
+        content: ''
+        height: 1px
+        background: #000
+        bottom: 0
+        left: 50%
+        transform: translate(-50%,0)
+        width: 156px
+        position: absolute
+    .characteristics-tab__item.active
+      color: #000
+
+  .characteristics-tab__item
+    border: none
+    text-align: center
+    padding: 29px 0
+    font-size: 18px
+    margin: 0
+    //width: 100%
+    position: relative
+    z-index: 1
+    color: #000000
+
+  .characteristics-tab-content
+    padding: 0
+
+  .social-share-mobile
+    display: block
+
 @media only screen and (max-width: 480px)
   .btn-burger
     margin: 0 0 0 10px
@@ -1245,7 +1465,27 @@
     height: 20px
     font-size: 12px
 
+  .video-slider .slick-center .video-box, .product-gallery .slick-center .product-gallery__box
+    width: 270px
+    margin: 20px -20px
 
+  .video-box, .product-gallery__box
+    height: 170px
+    width: 230px
+
+  .btn-play
+    width: 36px
+    height: 36px
+
+  .product-gallery .slick-slide
+    min-height: 170px
+
+  .slick-slider-my-style .product-gallery__box
+    width: 230px
+    margin: 20px -20px
+
+  .js-tab-content h2
+    margin: 0 0 30px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
@@ -1296,3 +1536,6 @@
 
   .list-address-info
     max-width: 260px
+
+  .list-info-prod, .characteristics-tab-content__item .box-text
+    font-size: 16px

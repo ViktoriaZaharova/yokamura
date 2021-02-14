@@ -100,6 +100,52 @@ $(window).on('load resize', function() {
     } else {
         $(".about-slider.slick-initialized").slick("unslick");
     }
+
+    if ($(window).width() < 576) {
+        $('.characteristics-tab:not(.slick-initialized)').slick({
+            dots: false,
+            nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+                '  <g transform="translate(-3789.771 -2184.9)">\n' +
+                '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+                '  </g>\n' +
+                '</svg>\n</button>',
+            prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+                '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+                '</svg>\n</button>',
+            speed: 100,
+            slidesToShow: 1,
+            centerMode: true,
+            asNavFor: '.characteristics-tab-content',
+            fade: true
+        });
+
+        $('.characteristics-tab-content:not(.slick-initialized)').slick({
+            dots: false,
+            arrows: false,
+            slidesToShow: 1,
+            asNavFor: '.characteristics-tab',
+            fade: true,
+            adaptiveHeight: true,
+        });
+    }
+
+    // if ($(window).width() > 992) {
+    //     $(function () {
+    //         let topPos = $('.btn-test-drive').offset().top;
+    //         $(window).scroll(function () {
+    //             let top = $(document).scrollTop(),
+    //                 pip = $('.tab-content').offset().top,
+    //                 height = $('.btn-test-drive').outerHeight();
+    //             if (top > topPos && top < pip - height) {
+    //                 $('.btn-test-drive').addClass('fixed').removeAttr("style");
+    //             } else if (top > pip - height) {
+    //                 $('.btn-test-drive').removeClass('fixed');
+    //             } else {
+    //                 $('.btn-test-drive').removeClass('fixed');
+    //             }
+    //         });
+    //     });
+    // }
 });
 // slick active
 
@@ -232,6 +278,10 @@ $('.dropdown-item').on('click', function () {
     // $('.dropdown-item').removeClass('click');
    $(this).toggleClass('click').siblings('.block-hidden').slideToggle();
 
+});
+
+$('.social-share-mobile__btn').on('click', function () {
+   $(this).parents('.social-share-mobile').toggleClass('active');
 });
 
 
@@ -395,21 +445,7 @@ $('[data-fancybox]').fancybox({
     ],
 });
 
-$(function () {
-    let topPos = $('.btn-test-drive').offset().top;
-    $(window).scroll(function () {
-        let top = $(document).scrollTop(),
-            pip = $('.tab-content').offset().top,
-            height = $('.btn-test-drive').outerHeight();
-        if (top > topPos && top < pip - height) {
-            $('.btn-test-drive').addClass('fixed').removeAttr("style");
-        } else if (top > pip - height) {
-            $('.btn-test-drive').removeClass('fixed');
-        } else {
-            $('.btn-test-drive').removeClass('fixed');
-        }
-    });
-});
+
 
 
 // Инициализация карты

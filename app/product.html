@@ -59,11 +59,18 @@
         </svg>
         <span class="text">записаться на сервис</span>
       </a>
+
+      <a href="tel:+74952052221" class="phone">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#phone"></use>
+        </svg>
+        <span class="phone-text">+7 (495) 205-22-21</span>
+      </a>
     </div>
   </div>
 </div>
 
-<header class="header">
+<header class="header header-product">
   <div class="container align-center justify-between">
     <a href="index.html" class="logo"><img src="img/logo2.svg" alt=""></a>
 
@@ -101,6 +108,11 @@
           <use xlink:href="img/sprite.svg#user"></use>
         </svg>
       </a>
+    </div>
+    <div class="btn-burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 </header>
@@ -158,6 +170,32 @@
             </div>
 
             <div class="views-content-wrapper">
+              <div class="dropdown-wrapper-tabs">
+                <div class="dropdown-item">
+                  <h3>360 <sup>o</sup></h3>
+                  <svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                  </svg>
+                </div>
+                <div class="block-hidden">
+                  <ul class="views-tab">
+                    <li class="js-tab-trigger views-tab__item" data-tab="views1">
+                      <div class="views-tab__text">360
+                        <svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#circle"></use>
+                        </svg>
+                      </div>
+                    </li>
+                    <li class="js-tab-trigger views-tab__item active" data-tab="views2">
+                      <div class="views-tab__text">Галерея</div>
+                    </li>
+                    <li class="js-tab-trigger views-tab__item" data-tab="views3">
+                      <div class="views-tab__text">Видео</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <ul class="views-tab">
                 <li class="js-tab-trigger views-tab__item" data-tab="views1">
                   <div class="views-tab__icon">
@@ -685,37 +723,73 @@
   <div class="footer-top">
     <div class="container">
 
+      <div class="callback-box d-mobile">
+        <a href="callback.html" class="btn btn-accent btn-callback">обратная связь</a>
+
+        <a href="service.html" class="btn-service">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#settings"></use>
+          </svg>
+          <span class="text">записаться на сервис</span>
+        </a>
+      </div>
+
       <div class="footer-box">
         <h3>каталог</h3>
-        <ul class="footer-menu">
-          <li><a href="#">YOKAMURA i8</a></li>
-          <li><a href="#">YOKAMURA RX1</a></li>
-          <li><a href="#">YOKAMURA RX2</a></li>
-          <li><a href="#">YOKAMURA G</a></li>
-          <li><a href="#">YOKAMURA GS</a></li>
-          <li><a href="#">YOKAMURA ULTRA</a></li>
-          <li><a href="#">YOKAMURA Raptor</a></li>
-          <li><a href="#">YOKAMURA Raptor13</a></li>
-          <li><a href="#">YOKAMURA RS</a></li>
-        </ul>
+
+        <div class="dropdown-item">
+          <h3>каталог</h3>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </div>
+        <div class="block-hidden">
+          <ul class="footer-menu">
+            <li><a href="#">YOKAMURA i8</a></li>
+            <li><a href="#">YOKAMURA RX1</a></li>
+            <li><a href="#">YOKAMURA RX2</a></li>
+            <li><a href="#">YOKAMURA G</a></li>
+            <li><a href="#">YOKAMURA GS</a></li>
+            <li><a href="#">YOKAMURA ULTRA</a></li>
+            <li><a href="#">YOKAMURA Raptor</a></li>
+            <li><a href="#">YOKAMURA Raptor13</a></li>
+            <li><a href="#">YOKAMURA RS</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-box">
         <h3>сервис</h3>
-        <ul class="footer-menu">
-          <li><a href="#">Москва</a></li>
-          <li><a href="#">Санкт - Петербург</a></li>
-          <li><a href="#">Екатеринбург</a></li>
-          <li><a href="#">Новосибирск</a></li>
-          <li><a href="#">Челябинск</a></li>
-          <li><a href="#">Белгород</a></li>
-        </ul>
+        <div class="dropdown-item">
+          <h3>сервис</h3>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </div>
+        <div class="block-hidden">
+          <ul class="footer-menu">
+            <li><a href="#">Москва</a></li>
+            <li><a href="#">Санкт - Петербург</a></li>
+            <li><a href="#">Екатеринбург</a></li>
+            <li><a href="#">Новосибирск</a></li>
+            <li><a href="#">Челябинск</a></li>
+            <li><a href="#">Белгород</a></li>
+          </ul>
+        </div>
+
       </div>
 
       <div class="footer-box cooperation-box">
         <a href="cooperation.html" class="cooperation-links">сотрудничество</a>
+        <div class="dropdown-item">
+          <h3>сотрудничество</h3>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+          </svg>
+        </div>
+        <div class="block-hidden"></div>
       </div>
 
-      <div class="footer-box">
+      <div class="footer-box footer-box-tech">
         <h3>техподдержка</h3>
         <a href="tel:+74952052221" class="phone">
           <svg class="svg-icon">
@@ -748,7 +822,7 @@
   <div class="footer-bottom">
     <div class="container">
 
-      <a href="index.html" class="logo"><img src="img/logo1.svg" alt=""></a>
+      <a href="index.html" class="logo"><img src="img/logo2.svg" alt=""></a>
 
       <div class="box-social">
         <p>Присоединяйтесь!</p>
@@ -783,6 +857,8 @@
         </a>
       </div>
 
+      <a href="#" class="links-version">перейти на расширенную версию</a>
+
       <div class="copyright">
         <svg class="svg-icon">
           <use xlink:href="img/sprite.svg#copyright"></use>
@@ -792,6 +868,15 @@
     </div>
   </div>
 </footer>
+
+<div class="social-share-mobile">
+  <ul class="social-share-mobile__list">
+    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#viber"></use></svg></a></li>
+    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#telegram"></use></svg></a></li>
+    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a></li>
+  </ul>
+  <div class="social-share-mobile__btn"></div>
+</div>
 
 <!--<script src="js/jquery.min.js"></script>-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
