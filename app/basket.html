@@ -101,6 +101,12 @@
         </svg>
       </a>
     </div>
+
+    <div class="btn-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
@@ -118,7 +124,7 @@
         <div class="basket-card">
           <a href="product.html" class="basket-card__img"><img src="img/card1.jpg" alt=""></a>
           <div class="basket-card__body">
-            <div class="w-100">
+            <div class="w-100 d-desktop">
               <a href="#" class="btn-delete"></a>
             </div>
 
@@ -135,6 +141,7 @@
                 <div class="sum-currency"><img src="img/rub.svg" alt=""></div>
               </div>
               <div class="price-val">1* 90 560</div>
+              <a href="#" class="links-delete-order">Удалить</a>
               <div class="amount">
                 <span class="down">-</span>
                 <input type="text" value="1" />
@@ -147,7 +154,7 @@
         <div class="basket-card">
           <a href="product.html" class="basket-card__img"><img src="img/card1.jpg" alt=""></a>
           <div class="basket-card__body">
-            <div class="w-100">
+            <div class="w-100 d-desktop">
               <a href="#" class="btn-delete"></a>
             </div>
 
@@ -160,6 +167,7 @@
                 <div class="sum-currency"><svg class="svg-icon"><use xlink:href="img/sprite.svg#rub"></use></svg></div>
               </div>
               <div class="price-val">2* 90 560</div>
+              <a href="#" class="links-delete-order">Удалить</a>
               <div class="amount">
                 <span class="down">-</span>
                 <input type="text" value="1" />
@@ -175,14 +183,16 @@
           <ul class="list-orders">
             <li>
               <p>В корзине 3 товара</p>
-              <span class="list-orders__val">271 680 <span class="sum-currency"><svg class="svg-icon"><use xlink:href="img/sprite.svg#rub"></use></svg></span>
+              <span class="list-orders__val">271 680 <span class="sum-currency"><svg class="svg-icon"><use xlink:href="img/sprite.svg#rub"></use></svg></span></span>
             </li>
           </ul>
+
+          <a href="#" class="links-next-order">Вернуться к покупкам</a>
 
           <a href="checkout.html" class="btn btn-accent btn-shadow">продолжить оформление</a>
         </div>
 
-        <a href="authorization.html" class="color-grey">войти</a>
+        <a href="authorization.html" class="color-grey links-come">войти</a>
       </div>
     </div>
   </section>
@@ -307,10 +317,8 @@
 
     <div class="modal__close"></div>
 
-    <div class="modal__body">
       <h2>Сообщение отправлено!</h2>
       <a href="index.html" class="links-accent">на главную</a>
-    </div>
   </div>
 </div>
 
@@ -319,10 +327,8 @@
 
     <div class="modal__close"></div>
 
-    <div class="modal__body">
       <h2>Письмо отправлено!</h2>
       <a href="authorization.html" class="links-accent">войти</a>
-    </div>
   </div>
 </div>
 
@@ -331,10 +337,8 @@
 
     <div class="modal__close"></div>
 
-    <div class="modal__body">
       <h2>Спасибо за регистрацию!</h2>
       <a href="index.html" class="links-accent">на главную</a>
-    </div>
   </div>
 </div>
 <!-- Пoдлoжкa -->
@@ -345,11 +349,11 @@
 </div>
 
 
-<script src="js/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
+<script src="js/jquery.threesixty.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
 <script src="js/common.js"></script>
 
 </body>

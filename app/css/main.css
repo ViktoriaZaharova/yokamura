@@ -1780,7 +1780,7 @@ footer {
 
 .basket-card__body {
   max-width: 534px;
-  width: 100%;
+  width: calc(100% - 292px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1834,7 +1834,7 @@ footer {
     width: 9px;
     height: 2px;
     background: #fff;
-    top: 10px;
+    top: 11px;
     left: 7px; }
   .btn-delete:before {
     -webkit-transform: rotate(45deg);
@@ -1921,6 +1921,9 @@ footer {
   .basket-total .links {
     text-align: right;
     margin: 0 0 0 auto; }
+
+.links-next-order, .links-delete-order {
+  display: none; }
 
 .basket-total__item {
   width: 100%;
@@ -3031,7 +3034,14 @@ footer {
     width: calc(100% - 600px); }
   .registration-content {
     max-width: 400px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .basket-card__img {
+    width: 200px;
+    height: 200px; }
+  .basket-card__body {
+    width: calc(100% - 200px); }
+  .basket-card {
+    padding: 20px 0; } }
 
 @media only screen and (max-width: 1300px) {
   .home-slider__box-img {
@@ -3054,7 +3064,19 @@ footer {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    margin: 0 15px 0 0; } }
+    margin: 0 15px 0 0; }
+  .basket-total {
+    max-width: 380px; }
+  .list-orders {
+    font-size: 14px; }
+  .list-orders__val {
+    font-size: 20px; }
+    .list-orders__val .sum-currency {
+      width: 11px;
+      height: 12px;
+      margin: 0 0 0 7px; }
+  .basket-wrapper {
+    width: calc(100% - 380px); } }
 
 @media only screen and (max-width: 1200px) {
   .menu li {
@@ -3104,7 +3126,18 @@ footer {
   .cooperation-content, .authorization-content {
     width: calc(100% - 500px); }
   .authorization {
-    padding: 110px 0 60px; } }
+    padding: 110px 0 60px; }
+  .basket-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px; }
+  .basket-card__body {
+    max-width: none; }
+  .basket-total__item {
+    margin: 0 0 10px; }
+  .basket-total {
+    max-width: none;
+    margin: 0 auto; } }
 
 @media only screen and (max-width: 992px) {
   header {
@@ -3637,7 +3670,22 @@ footer {
     padding: 0;
     margin: 36px 0 0; }
   .service {
-    padding: 110px 0 5px; } }
+    padding: 110px 0 5px; }
+  .basket-card__img {
+    width: 168px;
+    height: 168px; }
+  .basket-card__body {
+    width: calc(100% - 168px); }
+  .basket-card__name {
+    font-size: 14px;
+    margin: 0 0 17px; }
+  .sum {
+    font-size: 24px;
+    font-weight: 800; }
+  .sum-currency {
+    margin: 0 0 0 17px;
+    width: 15px;
+    height: 17px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px) {
@@ -3650,7 +3698,68 @@ footer {
   .logo {
     max-width: 195px; }
   .home-slider__box-img {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .basket .title-line .links {
+    display: none; }
+  .basket-card {
+    border: none; }
+    .basket-card .list-info {
+      display: none; }
+  .basket-card__body-item {
+    width: 100%; }
+  .d-desktop {
+    display: none; }
+  .basket-card__body-item-last {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: left; }
+    .basket-card__body-item-last .sum {
+      width: 100%; }
+  .price-val {
+    font-size: 20px;
+    margin: 13px 0 20px;
+    width: 100%; }
+  .amount {
+    margin: 0 0 0 24px;
+    border-radius: 4px; }
+    .amount span {
+      background: #fff; }
+    .amount .up {
+      border-radius: 0 4px 4px 0; }
+    .amount .down {
+      border-radius: 4px 0 0 4px; }
+    .amount input {
+      font-size: 17px; }
+  .links-delete-order {
+    display: inline-block;
+    font-size: 15px;
+    margin: auto 0 0;
+    color: #999999; }
+    .links-delete-order:hover {
+      color: #FF1B0E; }
+  .basket-total__item {
+    padding: 0;
+    background: transparent;
+    margin: 0 0 38px; }
+    .basket-total__item .btn {
+      margin: 33px auto 0; }
+  .links-next-order {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    color: #0451BF;
+    display: block;
+    margin: 43px auto 0; }
+  .list-orders li p, .list-orders li span {
+    background: #fff; }
+  .links-come {
+    display: none; } }
 
 @media only screen and (max-width: 575px) {
   .copyright {

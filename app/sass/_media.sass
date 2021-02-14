@@ -20,6 +20,17 @@
     max-width: 400px
     margin: 0 auto
 
+  .basket-card__img
+    width: 200px
+    height: 200px
+
+  .basket-card__body
+    width: calc(100% - 200px)
+
+  .basket-card
+    padding: 20px 0
+
+
 @media only screen and (max-width: 1300px)
   .home-slider__box-img
     width: 600px
@@ -45,6 +56,22 @@
   .btn-maps-icon
     order: -1
     margin: 0 15px 0 0
+
+  .basket-total
+    max-width: 380px
+
+  .list-orders
+    font-size: 14px
+
+  .list-orders__val
+    font-size: 20px
+    .sum-currency
+      width: 11px
+      height: 12px
+      margin: 0 0 0 7px
+
+  .basket-wrapper
+    width: calc(100% - 380px)
 
 @media only screen and (max-width: 1200px)
   .menu li
@@ -115,6 +142,20 @@
   .authorization
     padding: 110px 0 60px
 
+  .basket-wrapper
+    width: 100%
+    padding: 0
+    margin: 0 0 40px
+
+  .basket-card__body
+    max-width: none
+
+  .basket-total__item
+    margin: 0 0 10px
+
+  .basket-total
+    max-width: none
+    margin: 0 auto
 
 
 
@@ -721,6 +762,27 @@
   .service
     padding: 110px 0 5px
 
+  .basket-card__img
+    width: 168px
+    height: 168px
+
+  .basket-card__body
+    width: calc(100% - 168px)
+
+  .basket-card__name
+    font-size: 14px
+    margin: 0 0 17px
+
+  .sum
+    font-size: 24px
+    font-weight: 800
+
+  .sum-currency
+    margin: 0 0 0 17px
+    width: 15px
+    height: 17px
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
   .list-message
@@ -738,6 +800,76 @@
 
   .home-slider__box-img
     max-width: 100%
+
+  .basket
+    .title-line
+      .links
+        display: none
+
+  .basket-card
+    border: none
+    .list-info
+      display: none
+
+  .basket-card__body-item
+    width: 100%
+
+  .d-desktop
+    display: none
+    
+  .basket-card__body-item-last
+    justify-content: flex-end
+    display: flex
+    flex-wrap: wrap
+    text-align: left
+    .sum
+      width: 100%
+
+  .price-val
+    font-size: 20px
+    margin: 13px 0 20px
+    width: 100%
+
+  .amount
+    margin: 0 0 0 24px
+    border-radius: 4px
+    span
+      background: #fff
+    .up
+      border-radius: 0 4px 4px 0
+    .down
+      border-radius: 4px 0 0 4px
+    input
+      font-size: 17px
+
+  .links-delete-order
+    display: inline-block
+    font-size: 15px
+    margin: auto 0 0
+    color: $text
+    &:hover
+      color: $accent
+
+  .basket-total__item
+    padding: 0
+    background: transparent
+    margin: 0 0 38px
+    .btn
+      margin: 33px auto 0
+
+  .links-next-order
+    text-align: center
+    width: 100%
+    font-size: 15px
+    color: #0451BF
+    display: block
+    margin: 43px auto 0
+    
+  .list-orders li p, .list-orders li span
+    background: #fff
+
+  .links-come
+    display: none
 
 @media only screen and (max-width: 575px)
   .copyright
