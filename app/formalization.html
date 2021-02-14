@@ -25,164 +25,40 @@
 
 <body>
 
-<div class="catalog-menu">
-  <div class="container">
 
-    <div class="catalog-menu-wrapper">
-      <div class="catalog-menu-box">
-        <a href="#" class="catalog-menu-box__title">Электросамокаты</a>
-        <ul class="catalog-menu__list">
-          <li><a href="#">YOKAMURA i8</a></li>
-          <li><a href="#">YOKAMURA RX1</a></li>
-          <li><a href="#">YOKAMURA RX2</a></li>
-          <li><a href="#">YOKAMURA G</a></li>
-          <li><a href="#">YOKAMURA GS</a></li>
-          <li><a href="#">YOKAMURA ULTRA</a></li>
-          <li><a href="#">YOKAMURA Raptor</a></li>
-          <li><a href="#">YOKAMURA Raptor13</a></li>
-          <li><a href="#">YOKAMURA RS</a></li>
-        </ul>
-      </div>
-      <div class="catalog-menu-box">
-        <a href="#" class="catalog-menu-box__title">Аксессуары</a>
-        <a href="#" class="catalog-menu-box__title">Запчасти</a>
-      </div>
-
-    </div>
-
-    <div class="callback-box">
-      <a href="callback.html" class="btn btn-accent btn-callback">обратная связь</a>
-
-      <a href="service.html" class="btn-service">
-        <svg class="svg-icon">
-          <use xlink:href="img/sprite.svg#settings"></use>
-        </svg>
-        <span class="text">записаться на сервис</span>
-      </a>
-    </div>
-  </div>
-</div>
-<header>
+<header class="header">
   <div class="container align-center justify-between">
     <a href="index.html" class="logo"><img src="img/logo3.svg" alt=""></a>
-
-    <ul class="menu">
-      <li><a href="#" class="links-catalog">каталог</a></li>
-      <li><a href="services.html">сервис</a></li>
-      <li><a href="cooperation.html">сотрудничество</a></li>
-    </ul>
-
-    <ul class="list-message">
-      <li><a href="#" target="_blank">
-        <svg class="svg-icon">
-          <use xlink:href="img/sprite.svg#whatsapp"></use>
-        </svg>
-      </a></li>
-      <li><a href="#" target="_blank">
-        <svg class="svg-icon">
-          <use xlink:href="img/sprite.svg#telegram"></use>
-        </svg>
-      </a></li>
-      <li><a href="#" target="_blank">
-        <svg class="svg-icon">
-          <use xlink:href="img/sprite.svg#viber"></use>
-        </svg>
-      </a></li>
-    </ul>
-
-    <div class="header-box">
-      <a href="basket.html" class="btn-basket">
-        <span class="btn-basket__icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#basket"></use></svg></span>
-        <!--        <span class="btn-basket__val">1</span>-->
-      </a>
-      <a href="registration.html" class="links-cabinet">
-        <svg class="svg-icon">
-          <use xlink:href="img/sprite.svg#user"></use>
-        </svg>
-      </a>
-    </div>
-
-    <div class="btn-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </div>
 </header>
 
 <main>
 
-  <section class="page service">
+  <section class="page authorization formalization">
     <div class="container">
+      <h1>Оформление заказа</h1>
+      <div class="authorization-content">
+       <div class="line-wrapper">
+         <a href="authorization.html" class="links-entrance">Вход </a>
+         <a href="registration.html" class="links-accent">Регистрация</a>
+       </div>
 
-      <h1>Записаться на сервис</h1>
-
-      <form method="post" class="form form-service">
-        <div class="form-group">
-          <span class="input-title">Выберите тип техники</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите модель *</option>
-              <option value="Выберите модель *">Выберите модель *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <span class="input-title">Выберите город и желаемую дату</span>
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите город *">Выберите город *</option>
-              <option value="Выберите город *">Выберите город *</option>
-            </select>
-            <span class="select-icon"></span>
+        <form method="post" class="form form-callback">
+          <label><input type="text" name="mail" required placeholder="Email*"></label>
+          <label>
+            <input type="text" name="password" required placeholder="Пароль*">
+            <span class="btn-view"><svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg></span>
           </label>
 
-          <label class="label-date">
-            <input type="text" placeholder="Выберите дату *" name="date" required>
-            <span class="input-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#calendar"></use></svg></span>
-          </label>
+          <a href="password-reset.html" class="links-accent links-reset">Забыли пароль?</a>
+          <button type="submit" class="btn btn-accent">войти</button>
+        </form>
+        <div class="guest">
+          <p>Оформить заказ ка гость</p>
 
-          <label class="label-select">
-            <select name="select" class="select" required>
-              <option value="Выберите модель *">Выберите сервис *</option>
-              <option value="Выберите модель *">Выберите сервис *</option>
-            </select>
-            <span class="select-icon"></span>
-          </label>
-
-          <a href="javascript:;" data-src="#maps-modal" class="btn-maps" data-fancybox="maps">
-            <span class="btn-maps-text">посмотреть на карте</span>
-            <span class="btn-maps-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-bottom"></use></svg></span>
-          </a>
+          <a href="checkout.html" class="btn-border btn">продолжить без авторизации</a>
         </div>
-
-        <div class="form-group">
-          <span class="input-title">Комментарий</span>
-          <label class="label-message"><textarea name="message" placeholder="Что случилось?"></textarea></label>
-        </div>
-
-        <div class="form-group">
-          <span class="input-title">Ваши данные</span>
-          <label><input type="text" name="name" required placeholder="Имя *"></label>
-          <label><input type="text" name="phone" required placeholder="Телефон *"></label>
-          <label><input type="text" name="mail" required placeholder="Email *"></label>
-        </div>
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-shadow btn-accent">отправить заявку</button>
-
-          <label class="checkbox">
-            <input class="checkbox-inp" type="checkbox" name="checkbox">
-            <span class="checkbox-custom"></span>
-            <span class="label">Я согласен на обработку
-моей <a href="politics.html" class="links-accent">персональной информации</a></span>
-          </label>
-        </div>
-
-        <div class="necessarily">* Обязательные поля для заполнения</div>
-      </form>
+      </div>
 
 
     </div>
@@ -373,9 +249,9 @@
 <!-- Пoдлoжкa -->
 <div class="overlay"></div>
 
-<div id="maps-modal" class="modal-iframe">
-<div class="map" id="map"></div>
-</div>
+<a href="#thanks__modal" class="btn btn-accent open_modal">Сообщение отправлено!</a>
+<a href="#send__modal" class="btn btn-accent open_modal">Письмо отправлено!</a>
+<a href="#registration__modal" class="btn btn-accent open_modal">Спасибо за регистрацию!</a>
 
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -385,6 +261,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
 <script src="js/common.js"></script>
-
 </body>
 </html>

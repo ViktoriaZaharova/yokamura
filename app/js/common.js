@@ -69,6 +69,18 @@ $('.popular-slider').slick({
 
 });
 
+$('.address-slider').slick({
+    slidesToShow: 1,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+});
+
 // slick active
 $(window).on('load resize', function() {
     if ($(window).width() < 768) {
@@ -236,6 +248,7 @@ $(function () {
     open_modal.on('click',function (event) {
         event.preventDefault();
 
+
         modal.css('display', 'none').animate({
             opacity: 0,
             top: '45%'
@@ -250,8 +263,13 @@ $(function () {
                         opacity: 1,
                         top: '50%'
                     }, 200);
+                $('.address-slider').slick('setPosition');
             });
+
+
     });
+
+
 
     close.on('click', function () {
         modal

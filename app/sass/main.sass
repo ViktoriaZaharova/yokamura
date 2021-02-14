@@ -1018,7 +1018,10 @@ footer
   .links-accent
     text-align: center
     margin: 0 auto 10px
-
+  .mr-auto
+    margin: 0 auto 0 0
+  .m-0
+    margin: 0
   .box-text
     font-size: 19px
     margin: 72px auto 37px
@@ -1083,10 +1086,10 @@ footer
     align-items: center
 
   h2
-    margin: 0 0 80px
+    margin: 0 0 20px
 
   .box-text
-    margin: 10px auto 0
+    margin: auto
     font-size: 22px
     max-width: 384px
     width: 100%
@@ -1095,15 +1098,15 @@ footer
     .m-a
       margin: 0 auto
 
-    .ml-auto
-      margin: 0 0 0 auto
+    .mr-auto
+      margin: 0 auto 0 0
 
 
 .modal__footer
   display: flex
   align-items: center
   justify-content: space-between
-  margin: auto 0 10px
+  margin: 37px 0 10px
   width: 100%
 
   .text-right
@@ -1953,6 +1956,9 @@ footer
 
   &:hover, &:focus
     border-color: #2FB457
+  span
+    color: $text
+    margin: 0 0 0 5px
 
 
 .label-promo
@@ -1971,7 +1977,7 @@ footer
 
 .info-promo
   display: flex
-  align-items: center
+  align-items: flex-start
   margin: 23px 0 0
   font-size: 14px
 
@@ -2607,6 +2613,98 @@ footer
   sup
     color: $accent
     margin: 0 5px 0 0
+
+.formalization
+  .line-wrapper
+    justify-content: space-between
+    width: 100%
+    max-width: 444px
+
+.links-entrance
+  color: #000000
+  font-size: 25px
+
+.btn-border
+  font-size: 23px
+  color: #000
+  font-weight: 800
+  height: 85px
+  border: 1px solid $text
+  max-width: 444px
+  margin: 50px auto 0
+
+.guest
+  margin: 71px auto 0
+  width: 100%
+  max-width: 444px
+
+.where-pick
+  display: none
+  font-size: 16px
+
+.dropdown-wrapper
+  padding: 20px 0
+  position: relative
+  margin: 0 0 44px
+  display: none
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: calc(100% + 60px)
+    height: 1px
+    background: $text
+    left: 50%
+    transform: translate(-50%,0)
+  &:before
+    top: 0
+  &:after
+    bottom: 0
+  .svg-icon
+    width: 21px
+    height: 13px
+    fill: #000
+  .basket-card__name
+    width: 100%
+    margin: 0 0 40px
+    font-size: 21px
+  .line-wrapper
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  .amount
+    margin: 20px 0 0 auto
+  .price-val
+    margin: 0
+    font-size: 26px
+
+#maps-modal
+  .modal__wrapper
+    padding: 30px
+    max-width: 900px
+    height: 100%
+
+.address-slider
+  margin: 94px auto  0
+  padding: 0 60px
+
+.address-slider-box
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+
+  h3
+    font-size: 24px
+    margin: 0 0 24px
+    width: 100%
+  .list-address-info
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin: 0
+    width: 100%
 
 @import "media"
 // Всегда в конце

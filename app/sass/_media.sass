@@ -73,6 +73,13 @@
   .basket-wrapper
     width: calc(100% - 380px)
 
+  .btn-maps-preview
+    width: 140px
+    height: 140px
+
+  .address-box-checkout-wrapper .btn-maps
+    width: fit-content
+
 @media only screen and (max-width: 1200px)
   .menu li
     margin: 0 30px 0 0
@@ -157,7 +164,8 @@
     max-width: none
     margin: 0 auto
 
-
+  .checkout-wrapper
+    max-width: 450px
 
 @media only screen and (max-width: 992px)
   header
@@ -343,7 +351,39 @@
       width: 100%
       margin: 50px 0 0
 
-    
+  .checkout-wrapper
+    max-width: none
+
+  .list-radio-order
+    justify-content: space-around
+
+  .checkout .basket-total
+    display: none
+
+  .checkout-wrapper
+    button
+      margin: 34px auto 0
+      max-width: none
+    .links-next-order
+      display: flex
+      margin: 29px auto 0
+      text-align: center
+      color: #0451BF
+      font-size: 15px
+      justify-content: center
+
+  .important-info
+    max-width: none
+    margin: 20px auto 0
+    font-size: 14px
+
+  .info-payment .svg-icon
+    width: 25px
+    min-width: 25px
+    height: 25px
+
+  .checkout-box
+    margin: 0 0 35px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 950px)
@@ -646,6 +686,9 @@
 
   h1:before
     margin: 0 17px 0 0
+    width: 8px
+    height: 37px
+
 
   h1
     margin: 0 0 43px
@@ -782,6 +825,8 @@
     width: 15px
     height: 17px
 
+  .dropdown-wrapper
+    display: block
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
@@ -871,6 +916,113 @@
   .links-come
     display: none
 
+  .dropdown-wrapper .price-val
+    width: auto
+    font-size: 26px
+
+  .label-promo
+    .input-text
+      font-size: 14px
+      color: $accent
+    input
+      border: 3px solid $text
+        radius: 4px
+      width: 110px
+      height: 27px
+
+  label
+    margin: 0 0 20px
+
+  .info-promo .svg-icon
+    width: 25px
+    height: 25px
+
+
+
+  .radio-order
+    border: none
+    min-height: auto
+    padding: 0 0 0 45px
+    color: #000
+    font-size: 17px
+    .radio-custom
+      right: auto
+      left: 0
+      top: 0
+      width: 28px
+      height: 28px
+      border: 3px solid $text
+
+  .label-wrapper
+    padding: 0
+
+  .list-radio-order
+    li
+      width: 100%
+      max-width: none
+      margin: 0 0 26px
+      &:last-child
+        margin: 0
+
+
+  .date-delivery
+    margin: 4px 0 0
+    font-size: 13px
+
+  .btn-score
+    font-size: 23px
+
+  .list-radio-delivery
+    margin: 0 0 25px
+    justify-content: space-between
+    li
+      max-width: 49%
+      margin: 0
+      .radio
+        min-height: 130px
+        padding: 14px 8px 8px
+
+        border-radius: 10px
+        flex-direction: column
+        align-items: center
+        text-align: center
+      .radio-custom
+        width: 100%
+        height: 100%
+        border-radius: 10px
+        left: 0
+        top: 0
+        border: none
+      .label
+        margin: 0 auto 13px
+        display: block
+      .radio-inp:checked
+        + .radio-custom
+          background: #999999
+          &:before
+            display: none
+        ~ .label-wrapper .date-delivery
+            color: #fff
+        ~ .label-wrapper .price-delivery
+            color: #fff
+            .sum-currency
+              fill: #fff
+      .label-wrapper
+        position: relative
+        z-index: 2
+        display: inline-block
+      .radio-icon
+        display: block
+        position: relative
+        z-index: 1
+
+  .radio-icon
+    margin: 0 auto 16px
+
+  .price-delivery
+    justify-content: center
+    text-align: center
+
 @media only screen and (max-width: 575px)
   .copyright
     font-size: 16px
@@ -911,8 +1063,8 @@
   .modal-div-message
     .modal__wrapper
       padding: 20px
-    h2
-      margin: auto 0
+    //h2
+    //  margin: auto 0
 
   .form-group
     label
@@ -920,6 +1072,56 @@
 
   .form-service .btn
     margin: 33px 0 0
+
+  .checkout-box .form-group label
+    width: 100%
+
+  .btn-maps-text
+    display: none
+
+  .btn-maps-preview
+    margin: 0
+    width: 105px
+    height: 105px
+
+  .list-address-info
+    max-width: none
+    width: 100%
+    font-size: 17px
+    .icon
+      width: 26px
+      min-width: 26px
+      height: 26px
+      margin: 0 12px 0 0
+
+  .address-box-checkout-wrapper
+    .btn-maps
+      position: absolute
+      right: 0
+      top: 30px
+
+  .address-box-checkout
+    position: relative
+    h3
+      max-width: 270px
+
+  .checkout-box h3
+    font-size: 27px
+
+  .address-slider
+    padding: 0 30px
+    margin: 40px 0 0
+    h3
+      font-size: 20px
+
+  .address-slider-box .list-address-info
+    flex-direction: column
+    align-items: flex-start
+    font-size: 18px
+    li
+      margin: 0 0 16px
+      &:last-child
+        margin: 0
 
 @media only screen and (max-width: 480px)
   .btn-burger
@@ -1043,6 +1245,8 @@
     height: 20px
     font-size: 12px
 
+
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
   .about .box-text
@@ -1070,3 +1274,25 @@
     height: 50px
     padding: 12px
 
+  .basket-card__img
+    width: 120px
+    height: 120px
+
+  .basket-card__body
+    width: calc(100% - 120px)
+
+  .btn-score
+    font-size: 18px
+
+  .address-box-checkout-wrapper
+    position: relative
+
+  .address-box-checkout-wrapper .btn-maps-preview
+    width: 60px
+    height: 60px
+
+  .address-box-checkout-wrapper .btn-maps
+    top: 0
+
+  .list-address-info
+    max-width: 260px
