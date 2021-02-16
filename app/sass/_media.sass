@@ -60,6 +60,7 @@
 @media only screen and (max-width: 1300px)
   .home-slider__box-img
     width: 600px
+    min-height: 600px
 
   .home-slider__box-content
     width: calc(100% - 600px)
@@ -113,7 +114,7 @@
   .home-slider__box-name
     font-size: 44px
     h3
-      font-size: 50px
+      font-size: 40px
 
   .container
     padding: 0 30px
@@ -123,6 +124,7 @@
 
   .home-slider__box-img
     width: 500px
+    min-height: 500px
 
   .home-slider__box-content
     width: calc(100% - 500px)
@@ -213,6 +215,20 @@
     &:last-child
       margin: 0 0 10px
 
+
+@media only screen and (max-width: 1100px)
+  .home-slider__box-content .box-text
+    min-height: 180px
+
+  .list-characteristics
+    margin: 0 auto 40px
+
+  .home-slider__box-name
+    min-height: 100px
+    margin: 0 0 30px
+    font-size: 40px
+    h3
+      font-size: 36px
 
 @media only screen and (max-width: 992px)
   header
@@ -473,6 +489,16 @@
     &:last-child
       margin: 0
 
+  .home-slider__box-content .box-text
+    min-height: 220px
+
+  .home-slider__box-name
+    margin: 0 0 20px
+    min-height: 80px
+    font-size: 36px
+    h3
+      font-size: 30px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 950px)
   .callback-box
@@ -522,6 +548,7 @@
           color: #fff
     .box-text
       color: #fff
+      min-height: 200px
     .btn
       max-width: none
       height: 77px
@@ -538,6 +565,7 @@
     left: 50%
     top: 50%
     transform: translate(-50%, -50%)
+    min-height: 680px
 
   .main-home
     background-position: left top
@@ -1343,6 +1371,39 @@
   .social-share-mobile
     display: block
 
+  .home-slider__box-img
+    width: 790px
+    min-height: 790px
+    max-width: none
+
+  .main-home
+    .container
+      padding: 0
+
+  .home-slider
+    .slick-next
+      right: 20px
+    .slick-prev
+      left: 20px
+
+  .home-slider__box-content
+    padding: 0 30px
+    .list-characteristics
+      margin: 0 0 278px 30px
+      font-size: 16px
+      p
+        font-size: 36px
+
+  .home-slider__box-name
+    font-size: 59px
+    margin: 0 0 28px
+    min-height: 240px
+    h3
+      font-size: 59px
+      span
+        color: #fff
+        display: block
+
 @media only screen and (max-width: 480px)
   .btn-burger
     margin: 0 0 0 10px
@@ -1368,8 +1429,13 @@
 
   .home-slider__box-name
     font-size: 30px
+    min-height: 140px
     h3
       font-size: 40px
+
+  .home-slider__box-img
+    min-height: 500px
+    width: 500px
 
   .home-slider__box-content
     .list-characteristics
