@@ -692,15 +692,18 @@
 
   .popular-slider-box
     width: 290px
+    min-height: 353px
     font-size: 37px
     pointer-events: none
+    transition: .5s ease
 
   .popular-slider
     .slick-center
       .popular-slider-box
         width: 334px
         color: $accent
-        margin: 44px -20px 0
+        padding: 44px 0 0
+        margin: 0 -20px 0
         z-index: 1
         position: relative
       .popular-slider-box__img
@@ -712,6 +715,7 @@
 
   .popular-slider-box__img
     opacity: .6
+
 
 
   .about-slider
@@ -1192,7 +1196,33 @@
     justify-content: center
     text-align: center
 
+  .news-slider
+    .slick-current
+      .news-slider-box
+        font-size: 45px
+      .news-slider-box__img
+        height: 389px
+    .slick-sprev
+      transform: translate3d(-45%, 0, -10px)
+    .slick-snext
+      transform: translate3d(45%, 0, -10px)
+    .slick-snext, .slick-sprev
+      .news-slider-box
+        font-size: 29px
+      .news-slider-box__img
+        height: 290px
+    .slick-snext2
+      transform: translate3d(90%, 0, -20px)
+    .slick-sprev2
+      transform: translate3d(-90%, 0, -20px)
+
 @media only screen and (max-width: 575px)
+  .news-slider
+    .slick-sprev
+      transform: translate3d(-55%, 0, -10px)
+    .slick-snext
+      transform: translate3d(55%, 0, -10px)
+
   .copyright
     font-size: 16px
     .svg-icon
@@ -1232,8 +1262,6 @@
   .modal-div-message
     .modal__wrapper
       padding: 20px
-    //h2
-    //  margin: auto 0
 
   .form-group
     label
@@ -1405,6 +1433,18 @@
         display: block
 
 @media only screen and (max-width: 480px)
+  .news-slider .slick-current .news-slider-box__img
+    height: 300px
+
+  .news-slider .slick-current .news-slider-box
+    font-size: 34px
+
+  .news-slider .slick-snext .news-slider-box, .news-slider .slick-sprev .news-slider-box
+    font-size: 24px
+
+  .news-slider .slick-snext .news-slider-box__img, .news-slider .slick-sprev .news-slider-box__img
+    height: 220px
+
   .btn-burger
     margin: 0 0 0 10px
     width: 30px
@@ -1473,7 +1513,8 @@
 
   .popular-slider .slick-center .popular-slider-box
     width: 280px
-    margin: 40px -40px 0
+    padding: 40px 0 0
+    margin: 0 -40px
 
   .about
     background-position: center

@@ -235,8 +235,8 @@ h1
 .slick-dots
   width: 100%
   display: flex
-  align-items: center
-
+  align-items: flex-end
+  min-height: 13px
   li
     width: 9px
     height: 9px
@@ -246,17 +246,20 @@ h1
     cursor: pointer
     outline: none
     transition: .3s ease
-
     &:last-child
       margin: 0
-
+    &:last-child, &:first-child
+      &:not(.slick-active)
+        width: 5px
+        height: 5px
     button
       display: none
 
   .slick-active
-    width: 11px
-    height: 11px
+    width: 13px
+    height: 13px
     background: $accent
+
 
 .slick-dotted.slick-slider
   margin-bottom: 0
@@ -851,17 +854,20 @@ footer
   justify-content: center
   text-align: center
   font-size: 18px
+  //margin: 0 40px
   font-weight: 800
   height: 358px
   opacity: .5
   color: $text
+  transition: .3s ease
 
 .news-slider-box__name
   opacity: .3
   position: relative
   padding: 15px 0 0
   margin: 5px auto 0
-
+  transition: .3s ease
+  white-space: nowrap
   &:before
     content: ''
     position: absolute
@@ -874,6 +880,7 @@ footer
 
 .news-slider-box__img
   height: 160px
+  transition: .3s ease
   @include display-center-center
 
   img
@@ -884,15 +891,33 @@ footer
   max-width: 1100px
   width: 100%
   margin: 0 auto
+  .slick-track
+    max-width: 100% !important
+    transform: translate3d(0, 0, 0) !important
+    perspective: 100px
+  .slick-slide
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    opacity: 0
+    width: 100% !important
+    transform: translate3d(0, 0, 0)
+    transition: transform 1s, opacity 1s
 
-  .slick-center
+  .slick-current
+    opacity: 1
+    position: relative
+    display: block
+    z-index: 2
     .news-slider-box__img
       height: 290px
 
     .news-slider-box
       opacity: 1
       font-size: 34px
-
     .news-slider-box__name
       opacity: 1
       color: $accent
@@ -901,9 +926,31 @@ footer
       &:before
         background: #000
         height: 18px
+  .slick-snext
+    opacity: 1
+    transform: translate3d(25%, 0, -10px)
+    z-index: 1
+    perspective: 1000px
+
+  .slick-snext2
+    opacity: 1
+    transform: translate3d(50%, 0, -20px)
+    z-index: 0
+    perspective: 1000px
+
+  .slick-sprev
+    opacity: 1
+    transform: translate3d(-25%, 0, -10px)
+
+  .slick-sprev2
+    opacity: 1
+    transform: translate3d(-50%, 0, -20px)
+
+.slick-snext, .slick-sprev, .slick-snext2, .slick-sprev2
+  display: block
 
 
-.slick-slider-opacity
+.slick-sprev, .slick-snext
   .news-slider-box
     opacity: .79
     font-size: 22px
@@ -914,7 +961,6 @@ footer
   .news-slider-box__name
     opacity: .5
     padding: 18px 0 0
-
     &:before
       height: 12px
 
