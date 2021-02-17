@@ -201,6 +201,8 @@
   .product-home .btn
     max-width: 300px
 
+
+
   .characteristics-tab__item
     font-size: 16px
 
@@ -286,9 +288,13 @@
     width: 500px
     height: 350px
 
-  .gallery-slider .slick-center .gallery-slider__box
-    width: 600px
-    height: 350px
+
+  .gallery-slider
+    .slick-slide
+      margin: 10px 20px
+      padding: 20px
+    .slick-center
+      transform: scaleX(1.20) scaleY(1)
 
   .gallery-slider__box-name
     font-size: 20px
@@ -448,20 +454,15 @@
   .checkout-box
     margin: 0 0 35px
 
-  .product-gallery .slick-slide
-    min-height: 283px
 
-  .product-gallery__box
+  .product-gallery .slick-current .product-gallery__box
+    max-width: 460px
+
+  .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img
     width: 314px
-    margin: 20px -60px
 
-  .product-gallery .slick-center .product-gallery__box
-    width: 459px
-    margin: 20px -80px
-
-  .slick-slider-my-style .product-gallery__box
-    width: 280px
-    margin: 50px -20px
+  .product-gallery .slick-sprev2 .product-gallery__box img, .product-gallery .slick-snext2 .product-gallery__box img
+    width: 240px
 
   .views-tab__item
     font-size: 25px
@@ -655,6 +656,9 @@
     min-height: 970px
     background-position: 40% top
 
+  .btn-test-drive.transform
+    transform: none
+
 @media only screen and (max-width: 768px)
   .home-slider__box-content
     .box-text
@@ -737,16 +741,19 @@
       p, h2
         display: inline
 
-  .gallery-slider .slick-center .gallery-slider__box
-    width: 415px
-    height: 254px
-    position: relative
-    z-index: 1
+  .gallery-slider
+    .slick-slide
+      padding: 15px
+      margin: 15px 25px
+    .slick-center
+      transform: scaleX(1.4) scaleY(1.05)
+    //width: 415px
+    //height: 254px
+
 
   .gallery-slider__box
     height: 254px
     width: 300px
-    margin: 20px 18px
 
   .gallery-slider__box-name
     font-size: 16px
@@ -1000,6 +1007,15 @@
       background: transparent
       img
         display: block
+
+  .product-gallery .slick-current .product-gallery__box
+    max-width: 300px
+
+  .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img
+    width: 270px
+
+  .product-gallery .slick-sprev2 .product-gallery__box img, .product-gallery .slick-snext2 .product-gallery__box img
+    width: 180px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
@@ -1350,6 +1366,10 @@
   .tabs, .views-tab
     display: none
 
+  .features-content
+    h2
+      display: block
+
   .dropdown-wrapper-tabs
     display: block
 
@@ -1431,6 +1451,18 @@
       span
         color: #fff
         display: block
+
+  .product-gallery .slick-current .product-gallery__box
+    max-width: 426px
+
+  .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img
+    width: 299px
+
+  .product-gallery .slick-sprev2
+    transform: translate3d(-100%, -25%, -20px)
+
+  .product-gallery .slick-snext2
+    transform: translate3d(100%, -25%, -20px)
 
 @media only screen and (max-width: 480px)
   .news-slider .slick-current .news-slider-box__img
@@ -1572,11 +1604,11 @@
     height: 20px
     font-size: 12px
 
-  .video-slider .slick-center .video-box, .product-gallery .slick-center .product-gallery__box
+  .video-slider .slick-center .video-box
     width: 270px
     margin: 20px -20px
 
-  .video-box, .product-gallery__box
+  .video-box
     height: 170px
     width: 230px
 
@@ -1584,12 +1616,7 @@
     width: 36px
     height: 36px
 
-  .product-gallery .slick-slide
-    min-height: 170px
 
-  .slick-slider-my-style .product-gallery__box
-    width: 230px
-    margin: 20px -20px
 
   .js-tab-content h2
     margin: 0 0 30px
@@ -1603,6 +1630,9 @@
     p
       font-size: 20px
 
+  .product-gallery .slick-current .product-gallery__box
+    max-width: 320px
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
   .about .box-text
@@ -1615,9 +1645,9 @@
   .about .title-line p, .about .title-line h2
     font-size: 28px
 
-  .gallery-slider .slick-center .gallery-slider__box
-    width: 280px
-    height: 200px
+  .gallery-slider
+    .slick-center
+      transform: scaleX(.9) scaleY(1)
 
   .gallery-slider__box
     height: 200px
@@ -1658,3 +1688,10 @@
 
   .product-home h1
     font-size: 30px
+
+  .product-gallery .slick-current .product-gallery__box
+    max-width: 250px
+
+
+  .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img
+    width: 200px

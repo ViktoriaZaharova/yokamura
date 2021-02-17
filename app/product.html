@@ -103,7 +103,7 @@
         <span class="btn-basket__icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#basket"></use></svg></span>
         <span class="btn-basket__val">1</span>
       </a>
-      <a href="registration.html" class="links-cabinet">
+      <a href="registration.html" class="links-cabinet active">
         <svg class="svg-icon">
           <use xlink:href="img/sprite.svg#user"></use>
         </svg>
@@ -170,30 +170,25 @@
             </div>
 
             <div class="views-content-wrapper">
+
+
               <div class="dropdown-wrapper-tabs">
-                <div class="dropdown-item">
-                  <h3>360 <sup>o</sup></h3>
-                  <svg class="svg-icon">
-                    <use xlink:href="img/sprite.svg#arrow-bottom"></use>
-                  </svg>
+                <div class="drop">
+                  <div class="option active placeholder js-tab-trigger views-tab__item" data-value="placeholder"  data-tab="views1">
+                    <div class="views-tab__text">360
+                      <svg class="svg-icon">
+                        <use xlink:href="img/sprite.svg#circle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="option js-tab-trigger views-tab__item" data-value="wow" data-tab="views2">
+                    <div class="views-tab__text">Галерея</div>
+                  </div>
+                  <div class="option js-tab-trigger views-tab__item" data-value="drop" data-tab="views3">
+                    <div class="views-tab__text">Видео</div>
+                  </div>
                 </div>
-                <div class="block-hidden">
-                  <ul class="views-tab">
-                    <li class="js-tab-trigger views-tab__item" data-tab="views1">
-                      <div class="views-tab__text">360
-                        <svg class="svg-icon">
-                          <use xlink:href="img/sprite.svg#circle"></use>
-                        </svg>
-                      </div>
-                    </li>
-                    <li class="js-tab-trigger views-tab__item active" data-tab="views2">
-                      <div class="views-tab__text">Галерея</div>
-                    </li>
-                    <li class="js-tab-trigger views-tab__item" data-tab="views3">
-                      <div class="views-tab__text">Видео</div>
-                    </li>
-                  </ul>
-                </div>
+
               </div>
 
               <ul class="views-tab">
@@ -664,6 +659,7 @@
 
       <div class="tab-content__item js-tab-content features-content" data-tab="3">
         <div class="container">
+          <h2>Особенности</h2>
           <div class="features-slider w-100">
             <div class="slide">
               <div class="features-slider__box">

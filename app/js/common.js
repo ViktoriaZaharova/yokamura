@@ -18,15 +18,16 @@ let homeSlider = $('.home-slider');
 
 $('.counter-slide__default').text("/ " + homeSlider.slick("getSlick").slideCount);
 
-homeSlider.on('afterChange', function(event, slick, currentSlide){
-    $(".counter-slide__cp").text(currentSlide<10?`${currentSlide+1}`:currentSlide+1);
+homeSlider.on('afterChange', function (event, slick, currentSlide) {
+    $(".counter-slide__cp").text(currentSlide < 10 ? `${currentSlide + 1}` : currentSlide + 1);
 });
 
 // slider gallery
 $('.gallery-slider').slick({
     slidesToShow: 3,
     variableWidth: true,
-   centerMode: true,
+
+    centerMode: true,
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <g transform="translate(-3789.771 -2184.9)">\n' +
         '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
@@ -42,6 +43,8 @@ $('.gallery-slider').slick({
 // popular section
 $('.popular-slider').slick({
     slidesToShow: 4,
+    cssEase: 'linear',
+    speed: 700,
     dots: true,
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <g transform="translate(-3789.771 -2184.9)">\n' +
@@ -82,7 +85,7 @@ $('.address-slider').slick({
 });
 
 // slick active
-$(window).on('load resize', function() {
+$(window).on('load resize', function () {
     if ($(window).width() < 768) {
         $('.about-slider:not(.slick-initialized)').slick({
             dots: true,
@@ -147,53 +150,6 @@ $(window).on('load resize', function() {
     //     });
     // }
 });
-// slick active
-
-// $('.news-slider').slick({
-//     slidesToShow: 5,
-//     variableWidth: true,
-//     easing: 'ease',
-//     centerMode: true,
-//     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
-//         '  <g transform="translate(-3789.771 -2184.9)">\n' +
-//         '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
-//         '  </g>\n' +
-//         '</svg>\n</button>',
-//     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
-//         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
-//         '</svg>\n</button>',
-//     responsive: [
-//         {
-//             breakpoint: 992,
-//             settings: {
-//                 slidesToShow: 3,
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 variableWidth: true,
-//             }
-//         }
-//     ]
-// });
-//
-//
-//
-// //Добавляем всем элементам прозрачность
-// !$('.news-slider .slick-slide').not('.news-slider .slick-center').addClass('slick-slider-opacity');
-// //Убираем прозрачность у центральных элементов
-// $('.news-slider .slick-slide.slick-active').eq(0).removeClass('slick-slider-opacity');
-// $('.news-slider .slick-slide.slick-active').eq(4).removeClass('slick-slider-opacity');
-// // $('.news-slider .slick-slide.slick-active').eq(4).removeClass('slick-slider-opacity');
-// // // Вешаем обработчик на событие слайдера
-// $(".news-slider").on("afterChange", function() {
-//     //Добавляем прозрачность всем элементам, обнуляя её у нужных
-//     $('.news-slider .slick-slide').not('.news-slider .slick-center').addClass('slick-slider-opacity');
-//     $('.news-slider .slick-slide.slick-active').eq(0).removeClass('slick-slider-opacity');
-//     // $('.news-slider .slick-slide.slick-active').eq(2).removeClass('slick-slider-opacity');
-//     $('.news-slider .slick-slide.slick-active').eq(4).removeClass('slick-slider-opacity');
-// });
 
 let rev = $(".news-slider");
 rev
@@ -296,6 +252,8 @@ $('.characteristics-product__slider').slick({
 
 $('.video-slider').slick({
     slidesToShow: 3,
+    cssEase: 'linear',
+    speed: 700,
     centerMode: true,
     dots: true,
     variableWidth: true,
@@ -309,11 +267,56 @@ $('.video-slider').slick({
         '</svg>\n</button>',
 });
 
-$('.product-gallery').slick({
-    slidesToShow: 5,
-    centerMode: true,
+
+let rev2 = $(".product-gallery");
+rev2
+    .on("init", function (event, slick, currentSlide) {
+        let cur = $(slick.$slides[slick.currentSlide]),
+            next = cur.next(),
+            next2 = cur.next().next(),
+            prev = cur.prev(),
+            prev2 = cur.prev().prev();
+        prev.addClass("slick-sprev");
+        next.addClass("slick-snext");
+        prev2.addClass("slick-sprev2");
+        next2.addClass("slick-snext2");
+        cur
+            .removeClass("slick-snext")
+            .removeClass("slick-sprev")
+            .removeClass("slick-snext2")
+            .removeClass("slick-sprev2");
+        slick.$prev = prev;
+        slick.$next = next;
+    })
+    .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+        console.log("beforeChange");
+        let cur = $(slick.$slides[nextSlide]);
+        console.log(slick.$prev, slick.$next);
+        slick.$prev.removeClass("slick-sprev");
+        slick.$next.removeClass("slick-snext");
+        slick.$prev.prev().removeClass("slick-sprev2");
+        slick.$next.next().removeClass("slick-snext2");
+        (next = cur.next()), (prev = cur.prev());
+        //prev2.prev().prev();
+        //next2.next().next();
+        prev.addClass("slick-sprev");
+        next.addClass("slick-snext");
+        prev.prev().addClass("slick-sprev2");
+        next.next().addClass("slick-snext2");
+        slick.$prev = prev;
+        slick.$next = next;
+        cur
+            .removeClass("slick-next")
+            .removeClass("slick-sprev")
+            .removeClass("slick-next2")
+            .removeClass("slick-sprev2");
+    });
+
+rev2.slick({
+    speed: 700,
+    arrows: true,
     dots: true,
-    variableWidth: true,
+    // focusOnSelect: true,
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <g transform="translate(-3789.771 -2184.9)">\n' +
         '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
@@ -322,23 +325,17 @@ $('.product-gallery').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
         '</svg>\n</button>',
+    infinite: true,
+    centerMode: true,
+    slidesPerRow: 1,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: "0",
+    swipe: true,
+    customPaging: function (slider, i) {
+        return "";
+    }
 });
-
-//Добавляем всем элементам классы
-$('.product-gallery .slick-slide').addClass('slick-slider-my-style');
-//Убираем прозрачность у центральных элементов
-$('.product-gallery .slick-slide.slick-active').eq(1).removeClass('slick-slider-my-style');
-$('.product-gallery .slick-slide.slick-active').eq(2).removeClass('slick-slider-my-style');
-$('.product-gallery .slick-slide.slick-active').eq(3).removeClass('slick-slider-my-style');
-//Вешаем обработчик на событие слайдера
-$(".product-gallery").on("afterChange", function() {
-    //Добавляем прозрачность всем элементам, обнуляя её у нужных
-    $('.product-gallery .slick-slide').addClass('slick-slider-my-style');
-    $('.product-gallery .slick-slide.slick-active').eq(1).removeClass('slick-slider-my-style');
-    $('.product-gallery .slick-slide.slick-active').eq(2).removeClass('slick-slider-my-style');
-    $('.product-gallery .slick-slide.slick-active').eq(3).removeClass('slick-slider-my-style');
-});
-
 
 
 // menu catalog
@@ -353,13 +350,45 @@ $('.links-catalog, .btn-burger').on("click", function (e) {
 // menu footer
 $('.dropdown-item').on('click', function () {
     // $('.dropdown-item').removeClass('click');
-   $(this).toggleClass('click').siblings('.block-hidden').slideToggle();
+    $(this).toggleClass('click').siblings('.block-hidden').slideToggle();
 
 });
 
 $('.social-share-mobile__btn').on('click', function () {
-   $(this).parents('.social-share-mobile').toggleClass('active');
+    $(this).parents('.social-share-mobile').toggleClass('active');
 });
+
+// select
+$(".drop .option").click(function () {
+    let val = $(this).attr("data-value"),
+        $drop = $(".drop"),
+        prevActive = $(".drop .option.active").attr("data-value"),
+        options = $(".drop .option").length;
+    $drop.find(".option.active").addClass("mini-hack");
+    $drop.toggleClass("visible");
+    $drop.removeClass("withBG");
+    $(this).css("top");
+    $drop.toggleClass("opacity");
+    $(".mini-hack").removeClass("mini-hack");
+    if ($drop.hasClass("visible")) {
+        setTimeout(function () {
+            $drop.addClass("withBG");
+        }, 400 + options * 100);
+    }
+    triggerAnimation();
+    if (val !== "placeholder" || prevActive === "placeholder") {
+        $(".drop .option").removeClass("active");
+        $(this).addClass("active");
+    }
+});
+
+function triggerAnimation() {
+    let finalWidth = $(".drop").hasClass("visible");
+    $(".drop").css("width", "100%");
+    setTimeout(function () {
+        $(".drop").css("width", finalWidth + "em");
+    }, 400);
+}
 
 
 // mask phone
@@ -372,7 +401,7 @@ $(function () {
         close = $('.modal__close, .overlay'),
         modal = $('.modal__div');
 
-    open_modal.on('click',function (event) {
+    open_modal.on('click', function (event) {
         event.preventDefault();
 
 
@@ -395,7 +424,6 @@ $(function () {
 
 
     });
-
 
 
     close.on('click', function () {
@@ -439,7 +467,7 @@ $('.down').on("click", function () {
     $input.change();
     return false;
 });
-$('.up').on("click",function () {
+$('.up').on("click", function () {
     let $input = $(this).parent().find('input');
     $input.val(parseInt($input.val()) + 1);
     $input.change();
@@ -447,13 +475,13 @@ $('.up').on("click",function () {
 });
 
 $('.radio-order').on('click', function () {
-   $('.radio-order').removeClass('check');
-   $(this).addClass('check');
+    $('.radio-order').removeClass('check');
+    $(this).addClass('check');
 });
 
 $(".tab-header__item").on("click", function () {
     let id = $(this).attr('data-tab'),
-        content = $('.js-tab-content[data-tab="'+ id +'"]');
+        content = $('.js-tab-content[data-tab="' + id + '"]');
 
     $('.tab-header__item.active').removeClass('active'); // 1
     $(this).addClass('active'); // 2
@@ -467,7 +495,7 @@ $(".tab-header__item").on("click", function () {
 
 $(".characteristics-tab__item").on("click", function () {
     let id = $(this).attr('data-tab'),
-        content = $('.js-tab-content[data-tab="'+ id +'"]');
+        content = $('.js-tab-content[data-tab="' + id + '"]');
 
     $('.characteristics-tab__item.active').removeClass('active'); // 1
     $(this).addClass('active'); // 2
@@ -478,7 +506,7 @@ $(".characteristics-tab__item").on("click", function () {
 
 $(".views-tab__item").on("click", function () {
     let id = $(this).attr('data-tab'),
-        content = $('.js-tab-content[data-tab="'+ id +'"]');
+        content = $('.js-tab-content[data-tab="' + id + '"]');
 
     $('.views-tab__item.active').removeClass('active'); // 1
     $(this).addClass('active'); // 2
@@ -490,45 +518,47 @@ $(".views-tab__item").on("click", function () {
     $(".views-tab-content__item.active .product-gallery").slick('setPosition');
 });
 
-// $(document).ready(function(){
-//
-//     let $threeSixty = $('.threesixty');
-//
-//     $threeSixty.threeSixty({
-//         dragDirection: 'horizontal',
-//         useKeys: true,
-//         draggable: true
-//     });
-//
-//     $('.next').click(function(){
-//         $threeSixty.nextFrame();
-//     });
-//
-//     $('.prev').click(function(){
-//         $threeSixty.prevFrame();
-//     });
-//
-// });
-
 $('[data-fancybox]').fancybox({
     buttons: [
-        // "zoom",
-        //"share",
-        // "slideShow",
-        //"fullScreen",
-        //"download",
-        // "thumbs",
         "close"
     ],
 });
 
 
+// $(window).scroll(function() {
+//     // проверка на докрутку до определенного элемента
+//     let scroll_picca =$('.btn-test-drive').offset().top;
+//     console.log(scroll_picca) ;// выводим в консоль смещение  элемента пицца
+//     //если мы докрутили до нужного элемента
+//     if ($(this).scrollTop() > scroll_picca) {
+//         // создаем эффекты и анимацию
+//         $(".btn-test-drive").addClass('transform');
+//
+//     }else{
+//         $(".btn-test-drive").removeClass('transform');
+//
+//     }
+//
+// });
 
+$(window).scroll(function() {
+    let hT = $('.btn-test-drive').offset().top,
+        hH = $('.btn-test-drive').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    console.log((hT-wH) , wS);
+    if (wS > (hT+hH-wH)){
+        $(".btn-test-drive").addClass('transform');
+    } else{
+        $(".btn-test-drive").removeClass('transform');
+
+    }
+});
 
 // Инициализация карты
 ymaps.ready(init);
 
-function init () {
+function init() {
 
     //Центрирование и выбор масштаба карты
     let myMap = new ymaps.Map('map', {
@@ -539,7 +569,7 @@ function init () {
     // Создание своей метки
     let myPlacemark = new ymaps.Placemark(
         // Координаты метки
-        [51.669470, 39.205407] , {
+        [51.669470, 39.205407], {
             // Свойства метки
             hintContent: '', //Подсказка при наведении на маркер
             iconContent: '',
@@ -561,7 +591,7 @@ function init () {
         // Список типов карты
         .add('typeSelector')
         // Кнопка изменения масштаба - справа
-        .add('smallZoomControl', { right: 5, top: 75 })
+        .add('smallZoomControl', {right: 5, top: 75})
         // Стандартный набор кнопок
         .add('mapTools')
         //Линейка масштаба
