@@ -359,6 +359,9 @@ header.active, .header
   font-size: 27px
   font-weight: 800
 
+.catalog-menu-box__title.active
+  color: $accent
+
 .catalog-menu__list
   font-size: 20px
   font-weight: 800
@@ -484,7 +487,9 @@ header.active, .header
   width: 750px
   min-height: 750px
   position: relative
-  @include display-center-center
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
 
 
 .home-slider__box-content
@@ -2377,7 +2382,6 @@ footer
     display: flex
     align-items: center
     justify-content: space-between
-    flex-wrap: wrap
     border-bottom: 1px solid $text
     padding: 10px 0
 
@@ -2723,7 +2727,7 @@ footer
 
 .btn-burger.click
   span
-    background: #fff
+    background: $accent
 
 .d-mobile
   display: none

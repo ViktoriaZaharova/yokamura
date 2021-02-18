@@ -40,37 +40,7 @@ $('.gallery-slider').slick({
 
 });
 
-// popular section
-$('.popular-slider').slick({
-    slidesToShow: 4,
-    cssEase: 'linear',
-    speed: 700,
-    dots: true,
-    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
-        '  <g transform="translate(-3789.771 -2184.9)">\n' +
-        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
-        '  </g>\n' +
-        '</svg>\n</button>',
-    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
-        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
-        '</svg>\n</button>',
-    responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                variableWidth: true,
-                centerMode: true,
-            }
-        }
-    ]
 
-});
 
 $('.address-slider').slick({
     slidesToShow: 1,
@@ -132,23 +102,6 @@ $(window).on('load resize', function () {
         });
     }
 
-    // if ($(window).width() > 992) {
-    //     $(function () {
-    //         let topPos = $('.btn-test-drive').offset().top;
-    //         $(window).scroll(function () {
-    //             let top = $(document).scrollTop(),
-    //                 pip = $('.tab-content').offset().top,
-    //                 height = $('.btn-test-drive').outerHeight();
-    //             if (top > topPos && top < pip - height) {
-    //                 $('.btn-test-drive').addClass('fixed').removeAttr("style");
-    //             } else if (top > pip - height) {
-    //                 $('.btn-test-drive').removeClass('fixed');
-    //             } else {
-    //                 $('.btn-test-drive').removeClass('fixed');
-    //             }
-    //         });
-    //     });
-    // }
 });
 
 let rev = $(".news-slider");
@@ -199,7 +152,6 @@ rev.slick({
     speed: 1000,
     arrows: true,
     dots: false,
-    // focusOnSelect: true,
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
         '  <g transform="translate(-3789.771 -2184.9)">\n' +
         '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
@@ -218,7 +170,76 @@ rev.slick({
     customPaging: function (slider, i) {
         return "";
     }
-    /*infinite: false,*/
+});
+
+
+let rev3 = $(".popular-slider");
+rev3
+    .on("init", function (event, slick, currentSlide) {
+        let cur = $(slick.$slides[slick.currentSlide]),
+            next = cur.next(),
+            prev = cur.prev();
+        prev.addClass("slick-sprev");
+        next.addClass("slick-snext");
+        cur
+            .removeClass("slick-snext")
+            .removeClass("slick-sprev")
+        slick.$prev = prev;
+        slick.$next = next;
+    })
+    .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+        console.log("beforeChange");
+        let cur = $(slick.$slides[nextSlide]);
+        console.log(slick.$prev, slick.$next);
+        slick.$prev.removeClass("slick-sprev");
+        slick.$next.removeClass("slick-snext");
+        (next = cur.next()), (prev = cur.prev());
+        prev.addClass("slick-sprev");
+        next.addClass("slick-snext");
+        slick.$prev = prev;
+        slick.$next = next;
+        cur
+            .removeClass("slick-next")
+            .removeClass("slick-sprev");
+    });
+
+rev3.slick({
+    speed: 1000,
+    arrows: true,
+    dots: true,
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <g transform="translate(-3789.771 -2184.9)">\n' +
+        '    <path d="M3792.272,2184.9a2.489,2.489,0,0,1,1.767.733l10,10a2.5,2.5,0,0,1,0,3.535l-10,10a2.5,2.5,0,0,1-3.535-3.535l8.232-8.233-8.232-8.232a2.5,2.5,0,0,1,1.768-4.268Z"/>\n' +
+        '  </g>\n' +
+        '</svg>\n</button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="15.001" height="25" viewBox="0 0 15.001 25">\n' +
+        '  <path d="M3774.272,2209.9a2.493,2.493,0,0,1-1.768-.732l-10-10a2.5,2.5,0,0,1,0-3.535l10-10a2.5,2.5,0,0,1,3.535,3.535l-8.232,8.232,8.232,8.233a2.5,2.5,0,0,1-1.767,4.267Z" transform="translate(-3761.771 -2184.9)"/>\n' +
+        '</svg>\n</button>',
+    infinite: true,
+    // centerMode: true,
+    slidesPerRow: 1,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    centerPadding: "0",
+    swipe: true,
+    customPaging: function (slider, i) {
+        return "";
+    },
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                variableWidth: true,
+                centerMode: true,
+            }
+        }
+    ]
 });
 
 

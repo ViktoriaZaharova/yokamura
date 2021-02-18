@@ -695,30 +695,66 @@
       right: 20px
 
   .popular-slider-box
-    width: 290px
-    min-height: 353px
     font-size: 37px
     pointer-events: none
-    transition: .5s ease
+
+  .popular-slider-box__img
+    height: 366px
+    width: 290px
+    display: flex
+    align-items: center
+    justify-content: center
+
 
   .popular-slider
-    .slick-center
+    .slick-track
+      max-width: 100% !important
+      transform: translate3d(0, 0, 0) !important
+      perspective: 100px
+    .slick-slide
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      opacity: 0
+      //padding: 40px 0 0
+      width: 100% !important
+      transform: translate3d(0, 0, 0)
+      transition: transform 1s, opacity 1s
+    .slick-current
+      opacity: 1
+      position: relative
+      display: block
+      z-index: 2
+      padding: 0
       .popular-slider-box
+        margin: 0 auto
         width: 334px
         color: $accent
-        padding: 44px 0 0
-        margin: 0 -20px 0
-        z-index: 1
-        position: relative
       .popular-slider-box__img
         opacity: 1
+    .slick-snext
+      opacity: 1
+      transform: translate3d(45%, -50px, -10px)
+      z-index: 1
+      perspective: 1000px
+    .slick-sprev
+      opacity: 1
+      transform: translate3d(-45%, -50px, -10px)
+    .slick-sprev, .slick-snext
+
+      .popular-slider-box
+        opacity: .6
+      .popular-slider-box__img
+        width: 224px
+
 
   .popular
     .container
       padding: 0
 
-  .popular-slider-box__img
-    opacity: .6
 
 
 
@@ -1022,6 +1058,10 @@
 
   .cloudimage-360-next
     right: -35px
+
+  .home-slider__box-img
+    align-items: center
+    justify-content: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
@@ -1346,7 +1386,7 @@
         margin: 0
 
   .product-home
-    background-position: 30% top
+    background-position: 31% top
     h1
       font-size: 50px
 
@@ -1434,6 +1474,9 @@
     max-width: none
 
   .main-home
+    background: url("../img/bg1-mobile.png") no-repeat right top
+      size: cover
+    padding: 139px 0 0
     .container
       padding: 0
 
@@ -1442,18 +1485,20 @@
       right: 20px
     .slick-prev
       left: 20px
+    .slick-dots
+      margin: 30px auto 33px
 
   .home-slider__box-content
     padding: 0 30px
     .list-characteristics
-      margin: 0 0 278px 30px
+      margin: 0 0 230px 30px
       font-size: 16px
       p
         font-size: 36px
 
   .home-slider__box-name
-    font-size: 59px
-    margin: 0 0 28px
+    font-size: 50px
+    margin: 0 0 8px
     min-height: 240px
     h3
       font-size: 59px
@@ -1549,13 +1594,19 @@
   h2
     font-size: 30px
 
+
+
+
   .popular-slider-box
     font-size: 30px
 
-  .popular-slider .slick-center .popular-slider-box
-    width: 280px
-    padding: 40px 0 0
-    margin: 0 -40px
+  .popular-slider-box__img
+    width: 100%
+    height: 300px
+
+  .popular-slider .slick-sprev .popular-slider-box__img, .popular-slider .slick-snext .popular-slider-box__img
+    width: 200px
+
 
   .about
     background-position: center
@@ -1642,6 +1693,15 @@
   .product-gallery .slick-current .product-gallery__box
     max-width: 320px
 
+  .product-home
+    background-position: 28% top
+
+  .list-info-prod
+    font-size: 16px
+    span
+      min-width: 145px
+
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px)
   .about .box-text
@@ -1692,11 +1752,18 @@
   .list-address-info
     max-width: 260px
 
-  .list-info-prod, .characteristics-tab-content__item .box-text
+  .characteristics-tab-content__item .box-text
     font-size: 16px
 
-  .product-home h1
-    font-size: 30px
+  .list-info-prod
+    font-size: 14px
+    span
+      min-width: 120px
+
+  .product-home
+    background-position: 26% top
+    h1
+      font-size: 30px
 
   .product-gallery .slick-current .product-gallery__box
     max-width: 250px
@@ -1704,3 +1771,24 @@
 
   .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img
     width: 200px
+
+  .home-slider__box-content .list-characteristics p
+    font-size: 30px
+
+  .home-slider__box-content .list-characteristics li
+    margin: 0 0 10px
+
+  .home-slider__box-name h3
+    font-size: 34px
+
+  .main-home
+    background-position: left top
+
+  .popular-slider-box
+    font-size: 24px
+
+  .popular-slider .slick-sprev
+    transform: translate3d(-55%, -50px, -10px)
+
+  .popular-slider .slick-snext
+    transform: translate3d(55%, -50px, -10px)
