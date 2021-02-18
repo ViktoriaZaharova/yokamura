@@ -174,7 +174,8 @@
 
               <div class="dropdown-wrapper-tabs">
                 <div class="drop">
-                  <div class="option active placeholder js-tab-trigger views-tab__item" data-value="placeholder"  data-tab="views1">
+                  <div class="option active placeholder js-tab-trigger views-tab__item" data-value="placeholder"
+                       data-tab="views1">
                     <div class="views-tab__text">360
                       <svg class="svg-icon">
                         <use xlink:href="img/sprite.svg#circle"></use>
@@ -192,7 +193,7 @@
               </div>
 
               <ul class="views-tab">
-                <li class="js-tab-trigger views-tab__item" data-tab="views1">
+                <li class="js-tab-trigger views-tab__item active" data-tab="views1">
                   <div class="views-tab__icon">
                     <svg class="svg-icon">
                       <use xlink:href="img/sprite.svg#view"></use>
@@ -204,7 +205,7 @@
                     </svg>
                   </div>
                 </li>
-                <li class="js-tab-trigger views-tab__item active" data-tab="views2">
+                <li class="js-tab-trigger views-tab__item" data-tab="views2">
                   <div class="views-tab__icon">
                     <svg class="svg-icon">
                       <use xlink:href="img/sprite.svg#gallery"></use>
@@ -223,18 +224,21 @@
               </ul>
 
               <div class="views-tab-content">
-                <div class="js-tab-content views-tab-content__item" data-tab="views1">
-<!--                  <div class="threesixty-wrapper">-->
-<!--                    <div class="threesixty" data-path="img/up/gem{index}.jpg" data-count="10"></div>-->
-<!--                    <div class="ui">-->
-<!--                      <div class="next"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow360-1"></use></svg></div>-->
-<!--                      <div class="prev"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow360-2"></use></svg></div>-->
-<!--                    </div>-->
-<!--                  </div>-->
+                <div class="js-tab-content views-tab-content__item active" data-tab="views1">
+                  <div class="threesixty-wrapper">
+                    <div class="cloudimage-360"
+                         data-folder="img/up/"
+                         data-filename="gem{index}.png"
+                         data-amount="5"
+                         data-hide-360-logo="true">
+                      <button class="cloudimage-360-prev"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow360-2"></use></svg></button>
+                      <button class="cloudimage-360-next"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow360-1"></use></svg></button>
+                    </div>
+                  </div>
 
                 </div>
 
-                <div class="js-tab-content views-tab-content__item active" data-tab="views2">
+                <div class="js-tab-content views-tab-content__item" data-tab="views2">
                   <div class="product-gallery">
                     <div class="slide">
                       <a href="img/gallery-slider1.jpg" class="product-gallery__box" data-fancybox="gallery">
@@ -867,21 +871,48 @@
 
 <div class="social-share-mobile">
   <ul class="social-share-mobile__list">
-    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#viber"></use></svg></a></li>
-    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#telegram"></use></svg></a></li>
-    <li><a href="#"><svg class="svg-icon"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a></li>
+    <li><a href="#">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#viber"></use>
+      </svg>
+    </a></li>
+    <li><a href="#">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#telegram"></use>
+      </svg>
+    </a></li>
+    <li><a href="#">
+      <svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#whatsapp"></use>
+      </svg>
+    </a></li>
   </ul>
   <div class="social-share-mobile__btn"></div>
 </div>
 
 <script src="js/jquery.min.js"></script>
-<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="js/libs.min.js"></script>
-<!--<script src="js/jquery.threesixty.js"></script>-->
+<script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/2.6.0/js-cloudimage-360-view.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
 <script src="js/common.js"></script>
+
+<script>
+    // scroll block
+    $(window).scroll(function() {
+        let hT = $('.btn-test-drive').offset().top,
+            hH = $('.btn-test-drive').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+        if (wS > (hT+hH-wH)){
+            $(".btn-test-drive").addClass('transform');
+        } else{
+            $(".btn-test-drive").removeClass('transform');
+
+        }
+    });
+</script>
 
 </body>
 </html>

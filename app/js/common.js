@@ -525,35 +525,7 @@ $('[data-fancybox]').fancybox({
 });
 
 
-// $(window).scroll(function() {
-//     // проверка на докрутку до определенного элемента
-//     let scroll_picca =$('.btn-test-drive').offset().top;
-//     console.log(scroll_picca) ;// выводим в консоль смещение  элемента пицца
-//     //если мы докрутили до нужного элемента
-//     if ($(this).scrollTop() > scroll_picca) {
-//         // создаем эффекты и анимацию
-//         $(".btn-test-drive").addClass('transform');
-//
-//     }else{
-//         $(".btn-test-drive").removeClass('transform');
-//
-//     }
-//
-// });
 
-$(window).scroll(function() {
-    let hT = $('.btn-test-drive').offset().top,
-        hH = $('.btn-test-drive').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    console.log((hT-wH) , wS);
-    if (wS > (hT+hH-wH)){
-        $(".btn-test-drive").addClass('transform');
-    } else{
-        $(".btn-test-drive").removeClass('transform');
-
-    }
-});
 
 // Инициализация карты
 ymaps.ready(init);
@@ -597,3 +569,6 @@ function init() {
         //Линейка масштаба
         .add(new ymaps.control.ScaleLine());
 }
+
+
+window.CI360.init();

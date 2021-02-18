@@ -2503,46 +2503,38 @@ footer
   width: 100%
   margin: 0 auto
   position: relative
-  max-width: 746px
+  max-width: 466px
+  canvas
+    width: 100% !important
+    height: auto !important
 
-.threesixty
-  display: flex
-  align-items: center
-  justify-content: center
-  width: 100%
-  max-width: 470px
-  height: 470px
-  margin: 0 auto
-  position: relative
-
-.ui
+.cloudimage-360-next
   position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  width: 100%
-
-.next
-  position: absolute
-  right: 0
+  right: -108px
   width: 35px
   height: 33px
   fill: $text
   cursor: pointer
   transition: .3s ease
-
+  background: transparent
+  outline: none
+  transform: translate(-50%, -50%)
+  top: 50%
   &:hover
     fill: $accent
 
-.prev
+.cloudimage-360-prev
   position: absolute
-  left: 0
+  left: -108px
   width: 35px
   height: 33px
   fill: $text
   cursor: pointer
   transition: .3s ease
-
+  background: transparent
+  outline: none
+  transform: translate(-50%, -50%)
+  top: 50%
   &:hover
     fill: $accent
 

@@ -1017,6 +1017,12 @@
   .product-gallery .slick-sprev2 .product-gallery__box img, .product-gallery .slick-snext2 .product-gallery__box img
     width: 180px
 
+  .cloudimage-360-prev
+    left: -35px
+
+  .cloudimage-360-next
+    right: -35px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px)
   .list-message
@@ -1231,6 +1237,9 @@
       transform: translate3d(90%, 0, -20px)
     .slick-sprev2
       transform: translate3d(-90%, 0, -20px)
+
+  .cloudimage-360-prev, .cloudimage-360-next
+    display: none !important
 
 @media only screen and (max-width: 575px)
   .news-slider

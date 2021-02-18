@@ -2854,54 +2854,43 @@ footer {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  max-width: 746px; }
+  max-width: 466px; }
+  .threesixty-wrapper canvas {
+    width: 100% !important;
+    height: auto !important; }
 
-.threesixty {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  max-width: 470px;
-  height: 470px;
-  margin: 0 auto;
-  position: relative; }
-
-.ui {
+.cloudimage-360-next {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  right: -108px;
+  width: 35px;
+  height: 33px;
+  fill: #999999;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  background: transparent;
+  outline: none;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 100%; }
-
-.next {
-  position: absolute;
-  right: 0;
-  width: 35px;
-  height: 33px;
-  fill: #999999;
-  cursor: pointer;
-  -webkit-transition: .3s ease;
-  transition: .3s ease; }
-  .next:hover {
+  top: 50%; }
+  .cloudimage-360-next:hover {
     fill: #FF1B0E; }
 
-.prev {
+.cloudimage-360-prev {
   position: absolute;
-  left: 0;
+  left: -108px;
   width: 35px;
   height: 33px;
   fill: #999999;
   cursor: pointer;
   -webkit-transition: .3s ease;
-  transition: .3s ease; }
-  .prev:hover {
+  transition: .3s ease;
+  background: transparent;
+  outline: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%; }
+  .cloudimage-360-prev:hover {
     fill: #FF1B0E; }
 
 .views-tab-content__item {
@@ -4322,7 +4311,11 @@ footer {
   .product-gallery .slick-sprev .product-gallery__box img, .product-gallery .slick-snext .product-gallery__box img {
     width: 270px; }
   .product-gallery .slick-sprev2 .product-gallery__box img, .product-gallery .slick-snext2 .product-gallery__box img {
-    width: 180px; } }
+    width: 180px; }
+  .cloudimage-360-prev {
+    left: -35px; }
+  .cloudimage-360-next {
+    right: -35px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 670px) {
@@ -4513,7 +4506,9 @@ footer {
             transform: translate3d(90%, 0, -20px); }
   .news-slider .slick-sprev2 {
     -webkit-transform: translate3d(-90%, 0, -20px);
-            transform: translate3d(-90%, 0, -20px); } }
+            transform: translate3d(-90%, 0, -20px); }
+  .cloudimage-360-prev, .cloudimage-360-next {
+    display: none !important; } }
 
 @media only screen and (max-width: 575px) {
   .news-slider .slick-sprev {
